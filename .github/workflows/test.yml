@@ -22,7 +22,7 @@ jobs:
           git add .
       - name: set remote url
         run: |
-          echo "$GITHUB_ACTOR. $GITHUB_ACTOR@users.noreply.github.com"
+          echo "${{ secrets.GITHUB_ACTOR }}. ${{ secrets.GITHUB_ACTOR }}@users.noreply.github.com"
       - run: |
           git commit -m "Changelog file updated"
       - run: 
