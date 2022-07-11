@@ -20,9 +20,9 @@ jobs:
           changelog generate
       - run:
           git add .
-      - run:
+      - run: |
           git config --global user.email "${{ secrets.EMAIL }}@gmail.com"
-          git config --global user.name "${{ secrets.USERNAME }}""
+          git config --global user.name "${{ secrets.USERNAME }}"
           git commit -m "Changelog file updated"
       - run: 
           git push origin testing-workflows
