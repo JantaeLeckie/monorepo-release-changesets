@@ -18,5 +18,11 @@ jobs:
           npm install generate-changelog -g
       - run:
           changelog generate
+      - run:
+          git add .
+      - run:
+          git commit -m "Changelog file updated"
+      - run: 
+          git push origin testing-workflows
 
      
