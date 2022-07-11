@@ -16,4 +16,7 @@ jobs:
           node_version: 12
       - run: |
           npm install
+          npm install generate-changelog -g
+          changelog generate
+
      
