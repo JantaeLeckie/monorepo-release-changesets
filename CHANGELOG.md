@@ -2,6 +2,12 @@
 
 ##### Build System / Dependencies
 
+*  reverted changes7 ([09da2188](https://github.com/azu/monorepo-release-changesets/commit/09da2188c1ef10a241c06642714679627998575a))
+
+#### 1.0.0 (2022-07-11)
+
+##### Build System / Dependencies
+
 *  reverted changes2 ([909cfe31](https://github.com/azu/monorepo-release-changesets/commit/909cfe31f0c84b02a9df787d775b40be65a9ccfa))
 *  reverted changes ([2183e029](https://github.com/azu/monorepo-release-changesets/commit/2183e0292a6838f84d6cb5c9add49eaf6cd8d530))
 *  testing github config setup4 ([66a542b7](https://github.com/azu/monorepo-release-changesets/commit/66a542b7145e21880ede8c84aafd3491541dedca))
