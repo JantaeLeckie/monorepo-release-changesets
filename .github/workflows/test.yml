@@ -17,6 +17,8 @@ jobs:
       - run: 
           npm install generate-changelog -g
       - run:
+          git log 
+      - run:
           changelog generate
       - name: Set Github Configuration
         run: |
