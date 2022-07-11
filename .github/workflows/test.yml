@@ -14,9 +14,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node_version: 12
-      - run: |
-          npm install
+      - run: 
           npm install generate-changelog -g
+      - run:
           changelog generate
 
      
