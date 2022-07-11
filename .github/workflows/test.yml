@@ -1,0 +1,23 @@
+name: Test Workflows
+
+on: 
+  push:
+    branches: 
+      - testing-workflows
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Testing Workflows 
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node_version: 12
+      - run: 
+          npm install generate-changelog -g
+      - run:
+          changelog generate
+     
+
+     
