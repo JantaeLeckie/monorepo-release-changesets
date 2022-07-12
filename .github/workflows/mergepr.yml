@@ -19,5 +19,19 @@ jobs:
       with:
         node_version: 12
     - run:
-        echo '${{github.ref}} ${{github.actor}}'
-    
+        echo '${{github.ref}}'
+    - name: Install Changelog Generator
+      run: 
+        npm install generate-changelog -g
+    - name: Generate Updated Changelog
+      run:
+        changelog generate
+    - name: Set Github Configuration
+      run: |
+        git add .
+        git config --global user.email "${{github.actor}}@users.noreply.github.com"
+        git config --global user.name "${{github.actor}}"
+    - name: Commit Updated Changlog File
+      run: |
+        git commit -m "docs: changelog file updated"
+        git push origin testing-workflows
