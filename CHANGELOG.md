@@ -1,5 +1,11 @@
 #### 1.0.2 (2022-07-12)
 
+##### Other Changes
+
+* //github.com/JantaeLeckie/monorepo-release-changesets into testing-workflows ([baacdb46](https://github.com/azu/monorepo-release-changesets/commit/baacdb46b657ac3dbce371303e970afe0a6a2246))
+
+#### 1.0.2 (2022-07-12)
+
 ##### Build System / Dependencies
 
 *  testing merging on branch1 ([8dfef9af](https://github.com/azu/monorepo-release-changesets/commit/8dfef9af40ded2429a64a5586d4479cea955d280))
