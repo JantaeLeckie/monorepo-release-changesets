@@ -3,7 +3,7 @@ name: Testng PR-to-Changesets 2
 on:
   push:
     branches:
-      - tesing-workflows
+      - merger-test
     types: [closed]
     paths-ignore:
       - '.changeset/**'
