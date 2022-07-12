@@ -30,7 +30,7 @@ jobs:
         git config --global user.name "${{github.actor}}"
     - name: Generate Updated Changelog
       run:
-        standard-version cli.js
+        standard-version
     - name: Commit Updated Changlog File
       run: |
         git add .
