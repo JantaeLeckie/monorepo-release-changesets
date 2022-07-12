@@ -1,3 +1,9 @@
+#### 1.0.2 (2022-07-12)
+
+##### Build System / Dependencies
+
+*  testing merging on branch1 ([8dfef9af](https://github.com/azu/monorepo-release-changesets/commit/8dfef9af40ded2429a64a5586d4479cea955d280))
+
 #### 1.0.2 (2022-07-11)
 
 ##### Build System / Dependencies
