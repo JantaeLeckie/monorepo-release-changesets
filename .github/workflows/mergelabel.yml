@@ -32,7 +32,6 @@ jobs:
           node_version: ${{ matrix.node_version }}
       - name: PR to Changesets
         run: |
-          npx pr-to-changesets --config .github/pr-to-changesets.json --owner ${OWNER} --repo ${REPO} --pullRequestNumber ${PR_NUMBER} --output ".changeset/${OWNER}-${REPO}-${PR_NUMBER}.md"
           echo: 'owner ${OWNER} repo ${REPO} pullRequestNumber ${PR_NUMBER} output ".changeset/${OWNER}-${REPO}-${PR_NUMBER}.md'
         env:
           OWNER: ${{ github.event.pull_request.head.repo.owner.login }}
