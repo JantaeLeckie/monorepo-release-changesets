@@ -22,10 +22,7 @@ jobs:
         echo '${{github.ref}}'
     - name: Install Changelog Generator
       run: 
-        npm install generate-changelog -g
-    - name: Generate Updated Changelog
-      run:
-        changelog generate
+        standard-version cli.js
     - name: Set Github Configuration
       run: |
         git add .
