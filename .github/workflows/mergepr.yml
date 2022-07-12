@@ -31,7 +31,7 @@ jobs:
     - name: Generate Updated Changelog
       run:
         standard-version cli.js
-    - name: Commit Updated Changlog File
-      run: |
-        git commit -m "docs: changelog file updated"
-        git push origin testing-workflows
+    # - name: Commit Updated Changlog File
+    #   run: |
+    #     git commit -m "docs: changelog file updated"
+    #     git push origin testing-workflows
