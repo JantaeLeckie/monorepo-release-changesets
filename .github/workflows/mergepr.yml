@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: ${{ secrets.GITHUB_REF }} == 'refs/heads/testing/**'
+    if: ${{ GITHUB_REF }} == 'refs/heads/testing/**'
     steps:
     - name: Setup Checkout 
       uses: actions/checkout@v2
