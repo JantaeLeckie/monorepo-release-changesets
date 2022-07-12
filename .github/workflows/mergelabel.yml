@@ -1,9 +1,14 @@
-name: Testng PR-to-Changesets 2
+name: Testing a new pr
 
 on:
-  push:
+   pull_request:
     branches:
-      - merger-test
+      - testing-workflows
+    types: [closed]
+    paths-ignore:
+      - '.changeset/**'
+      - '**/CHANGELOG.md'
+
 
 jobs:
   build:
@@ -20,6 +25,7 @@ jobs:
           git remote add origin-with-token https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
           git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com"
           git config --global user.name "$GITHUB_ACTOR"
+          echo '$GITHUB_ACTOR'
       - name: setup Node ${{ matrix.node_version }}
         uses: actions/setup-node@v1
         with:
@@ -27,7 +33,8 @@ jobs:
       - name: PR to Changesets
         run: |
           npx pr-to-changesets --config .github/pr-to-changesets.json --owner ${OWNER} --repo ${REPO} --pullRequestNumber ${PR_NUMBER} --output ".changeset/${OWNER}-${REPO}-${PR_NUMBER}.md"
-      - env:
+          echo: 'owner ${OWNER} repo ${REPO} pullRequestNumber ${PR_NUMBER} output ".changeset/${OWNER}-${REPO}-${PR_NUMBER}.md'
+        env:
           OWNER: ${{ github.event.pull_request.head.repo.owner.login }}
           REPO: ${{ github.event.pull_request.head.repo.name }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
@@ -36,7 +43,7 @@ jobs:
         run: |
           git add .changeset
           git commit -m "CI(changeset): add changeset for PR #${PR_NUMBER}"
-          git push origin-with-token testing-webflows
+          git push origin-with-token testing-workflows
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
