@@ -8,13 +8,13 @@ on:
     branches:
       - 'testing-workflows'
 jobs:
-  if: github.ref == 'refs/heads/testing-worflows'
   build:
     runs-on: ubuntu-latest
-    steps:
-    - name: Setup Checkout 
-      uses: actions/checkout@v2
-    - name: Setup Node
-      uses: actions/setup-node@v1
-    - run:
-        echo  "${{ secrets.GITHUB_REF }}"
+    if: github.ref == 'refs/heads/testing-worflows'
+      steps:
+      - name: Setup Checkout 
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+      - run:
+          echo  "${{ secrets.GITHUB_REF }}"
