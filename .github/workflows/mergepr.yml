@@ -33,6 +33,4 @@ jobs:
         standard-version
     - name: Commit Updated Changlog File
       run: |
-        git add .
-        git commit -m "docs: changelog file updated"
         git push origin testing-workflows
