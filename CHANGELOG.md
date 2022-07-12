@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.9](https://github.com/azu/monorepo-release-changesets/compare/v1.0.8...v1.0.9) (2022-07-12)
+
+
+### Bug Fixes
+
+* testing merge file updated6 ([d319fb1](https://github.com/azu/monorepo-release-changesets/commit/d319fb14d4df5e9a7478b5e49c077a1a61fc0429))
+
 ### 1.0.8 (2022-07-12)
 
 ### [1.0.7](https://github.com/azu/monorepo-release-changesets/compare/v1.0.6...v1.0.7) (2022-07-12)
