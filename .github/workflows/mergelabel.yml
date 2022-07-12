@@ -4,10 +4,6 @@ on:
   push:
     branches:
       - merger-test
-    types: [closed]
-    paths-ignore:
-      - '.changeset/**'
-      - '**/CHANGELOG.md'
 
 jobs:
   build:
