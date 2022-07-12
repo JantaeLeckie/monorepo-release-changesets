@@ -32,10 +32,10 @@ jobs:
         run: |
           echo `pr-to-changesets --config .github/pr-to-changesets.json --owner ${OWNER} --repo ${REPO} --pullRequestNumber ${PR_NUMBER} --output ".changeset/${OWNER}-${REPO}-${PR_NUMBER}.md"`
         env:
-          OWNER: ${{${{github.actor}}}}
-          REPO: ${{${{github.actor}}}}
-          PR_NUMBER: ${{${{github.actor}}}}
-          GITHUB_TOKEN: ${{${{github.actor}}}}
+          OWNER: ${{github.actor}}
+          REPO: ${{github.actor}}
+          PR_NUMBER: ${{github.actor}}
+          GITHUB_TOKEN: ${{github.actor}}
       # - name: Git push
       #   run: |
       #     git add .changeset
