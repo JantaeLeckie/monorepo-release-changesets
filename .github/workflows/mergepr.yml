@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: ${{github.ref}} == 'refs/heads/testing-worflows'
+    if: contains(github.ref, "release")
     steps:
     - name: Setup Checkout 
       uses: actions/checkout@v2
