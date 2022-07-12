@@ -29,7 +29,7 @@ jobs:
         with:
           node_version: ${{ matrix.node_version }}
       - name: PR to Changesets
-        env:
+      - env:
           OWNER: ${{github.actor}}
           REPO: ${{github.actor}}
           PR_NUMBER: ${{github.actor}}

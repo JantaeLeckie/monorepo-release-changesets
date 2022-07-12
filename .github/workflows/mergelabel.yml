@@ -27,7 +27,7 @@ jobs:
       - name: PR to Changesets
         run: |
           npx pr-to-changesets --config .github/pr-to-changesets.json --owner ${OWNER} --repo ${REPO} --pullRequestNumber ${PR_NUMBER} --output ".changeset/${OWNER}-${REPO}-${PR_NUMBER}.md"
-        env:
+      - env:
           OWNER: ${{ github.event.pull_request.head.repo.owner.login }}
           REPO: ${{ github.event.pull_request.head.repo.name }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
