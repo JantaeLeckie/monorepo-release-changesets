@@ -35,7 +35,7 @@ jobs:
           PR_NUMBER: ${{github.actor}}
           GITHUB_TOKEN: ${{github.actor}}
         run:
-          echo 'owner ${{github.actor}} repo ${{github.actor}} pullRequestNumber ${{PR_NUMBER}} output .changeset/${{OWNER}}-${{REPO}}-${{github.actor}}.md'
+          echo 'owner ${{github.actor}} repo ${{github.actor}} pullRequestNumber ${PR_NUMBER} output .changeset/${OWNER}-${REPO}-${{github.actor}}.md'
         
       # - name: Git push
       #   run: |
