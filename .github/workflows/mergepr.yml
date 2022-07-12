@@ -11,11 +11,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     if: contains(github.ref, 'refs/heads/testing')
-    if: contains(github.ref, 'work*')
     steps:
     - name: Setup Checkout 
       uses: actions/checkout@v2
     - name: Setup Node
       uses: actions/setup-node@v1
+      with:
+        node_version: 12
     - run:
-        echo ${{github.ref}}
+        echo '${{github.ref}} ${{github.actor}}'
+    
