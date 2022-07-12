@@ -30,7 +30,7 @@ jobs:
         git config --global user.name "${{github.actor}}"
     - name: Generate Updated Changelog
       run:
-        standard-version
+        standard-version cli.js
     - name: Commit Updated Changlog File
       run: |
         git push origin testing-workflows
