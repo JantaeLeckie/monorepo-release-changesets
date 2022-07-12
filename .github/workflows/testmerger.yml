@@ -29,8 +29,8 @@ jobs:
         with:
           node_version: ${{ matrix.node_version }}
       - name: PR to Changesets
-        run: |
-          echo `owner ${OWNER} repo ${REPO} pullRequestNumber ${PR_NUMBER} output ".changeset/${OWNER}-${REPO}-${PR_NUMBER}.md"`
+        run:
+          echo 'owner ${OWNER} repo ${REPO} pullRequestNumber ${PR_NUMBER} output .changeset/${OWNER}-${REPO}-${PR_NUMBER}.md'
         env:
           OWNER: ${{github.actor}}
           REPO: ${{github.actor}}
