@@ -10,11 +10,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/testing-worflows'
-      steps:
-      - name: Setup Checkout 
-        uses: actions/checkout@v2
-      - name: Setup Node
-        uses: actions/setup-node@v1
-      - run:
-          echo  "${{ secrets.GITHUB_REF }}"
+    # if: github.ref == 'refs/heads/testing-worflows'
+    steps:
+    - name: Setup Checkout 
+      uses: actions/checkout@v2
+    - name: Setup Node
+      uses: actions/setup-node@v1
+    - run:
+        echo ${{github.ref}}
