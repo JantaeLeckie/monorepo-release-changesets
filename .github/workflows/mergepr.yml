@@ -17,4 +17,4 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@v1
     - run:
-        echo  'github.ref'
+        echo  "${{ secrets.GITHUB_REF }}"
