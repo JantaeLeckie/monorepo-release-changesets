@@ -3,7 +3,7 @@ name: Test Workflows
 on: 
   pull_request:
     branches: 
-      - testing-workflows
+      - testing-work
 
 jobs:
   build:
