@@ -16,6 +16,11 @@ jobs:
     strategy:
       matrix:
         node-version: [12.x]
+    env:
+      OWNER: ${{github.actor}}
+      REPO: ${{github.actor}}
+      PR_NUMBER: ${{github.actor}}
+      GITHUB_TOKEN: ${{github.actor}}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -29,11 +34,6 @@ jobs:
         with:
           node_version: ${{ matrix.node_version }}
       - name: PR to Changesets
-      - env:
-          OWNER: ${{github.actor}}
-          REPO: ${{github.actor}}
-          PR_NUMBER: ${{github.actor}}
-          GITHUB_TOKEN: ${{github.actor}}
         run:
           echo 'owner ${{github.actor}} repo ${{github.actor}} pullRequestNumber ${PR_NUMBER} output .changeset/${OWNER}-${REPO}-${{github.actor}}.md'
         
