@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: contains(github.ref, 'refes/heads/testing')
+    if: contains(github.ref, 'refs/heads/testing')
     steps:
     - name: Setup Checkout 
       uses: actions/checkout@v2
