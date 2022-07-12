@@ -1,0 +1,20 @@
+# When a pull request is merged for a branch with prefix “release/****” and a 
+# version label to the main branch, trigger a github workflow to update the a 
+# changelog with the current versions changes
+
+name: Test Merge PR to Release
+on:
+  push:
+    branches:
+      - 'testing-workflows'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/testing/**'
+    steps:
+    - name: Setup Checkout 
+        uses: actions/checkout@v2
+    - name: Setup Node
+      uses: actions/setup-node@v1
+    - run:
+        echo  'github.ref'
