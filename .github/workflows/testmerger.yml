@@ -29,13 +29,14 @@ jobs:
         with:
           node_version: ${{ matrix.node_version }}
       - name: PR to Changesets
-        run:
-          echo 'owner ${{github.actor}} repo ${{github.actor}} pullRequestNumber ${{PR_NUMBER}} output .changeset/${{OWNER}}-${{REPO}}-${{github.actor}}.md'
         env:
           OWNER: ${{github.actor}}
           REPO: ${{github.actor}}
           PR_NUMBER: ${{github.actor}}
           GITHUB_TOKEN: ${{github.actor}}
+        run:
+          echo 'owner ${{github.actor}} repo ${{github.actor}} pullRequestNumber ${{PR_NUMBER}} output .changeset/${{OWNER}}-${{REPO}}-${{github.actor}}.md'
+        
       # - name: Git push
       #   run: |
       #     git add .changeset
