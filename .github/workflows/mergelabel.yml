@@ -1,7 +1,7 @@
 name: Testng PR-to-Changesets 2
 
 on:
-  pull_request:
+  push:
     branches:
       - tesing-workflows
     types: [closed]
@@ -44,3 +44,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
+
