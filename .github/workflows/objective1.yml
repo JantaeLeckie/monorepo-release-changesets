@@ -30,9 +30,9 @@ jobs:
         git add .
         git config --global user.email "${{github.actor}}@users.noreply.github.com"
         git config --global user.name "${{github.actor}}"
-    - name: Generate Updated Changelog
-      run:
-        npm run release -- --no-verify
-    - name: Commit Updated Changlog File
-      run: |
-        git push --follow-tags origin testing-workflows
+    # - name: Generate Updated Changelog
+    #   run:
+    #     npm run release -- --no-verify
+    # - name: Commit Updated Changlog File
+    #   run: |
+    #     git push --follow-tags origin testing-workflows
