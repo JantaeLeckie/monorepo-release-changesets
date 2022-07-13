@@ -14,7 +14,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true && contains(github.ref, 'testing') && contains( github.event.pull_request.labels.*.name, 'feat')
+    if: github.event.pull_request.merged == true && contains(github.ref, 'testing') && contains( github.event.pull_request.labels.*.name, 'Version')
     steps:
     - name: Setup Checkout 
       uses: actions/checkout@v2
@@ -35,4 +35,4 @@ jobs:
         npm run release -- --no-verify
     - name: Commit Updated Changlog File
       run: |
-        git push origin testing-workflows
+        git push --follow-tags origin testing-workflows
