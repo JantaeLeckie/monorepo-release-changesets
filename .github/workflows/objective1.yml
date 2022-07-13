@@ -28,8 +28,8 @@ jobs:
     - name: Set Github Configuration
       run: |
         git add .
-        git config --global user.email "${{ secrets.GITHUB_ACTOR }}@users.noreply.github.com"
-        git config --global user.name "${{ secrets.GITHUB_ACTOR }}"
+        git config --global user.email "${{github.actor}}@users.noreply.github.com"
+        git config --global user.name "${{github.actor}}"
 
     - name: PR to Changesets
       run: |
@@ -43,8 +43,8 @@ jobs:
     - name: Git push
       run: |
         git add .changeset
-        git config --global user.email "${{ secrets.GITHUB_ACTOR }}@users.noreply.github.com"
-        git config --global user.name "${{ secrets.GITHUB_ACTOR }}"
+        git config --global user.email "${{github.actor}}@users.noreply.github.com"
+        git config --global user.name "${{github.actor}}"
         git commit -m "CI(changeset): add changeset for PR #${PR_NUMBER}"
         git push origin-with-token testing-workflows
       env:
