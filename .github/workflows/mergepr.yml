@@ -4,7 +4,7 @@
 
 name: Test Merge PR to Release
 on:
-  push:
+  pull_request:
     branches:
       - 'testing'
 jobs:
