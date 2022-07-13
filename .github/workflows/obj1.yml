@@ -1,32 +1,24 @@
-name: Release
+name: Publish
 
 on:
   push:
     branches:
-      - testing-workflows
-
-concurrency: ${{ github.workflow }}-${{ github.ref }}
+    - testing-workflow
 
 jobs:
-  release:
-    name: Release
+  publish:
+    name: Publish or Create Pull Request
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v2
-
-      - name: Setup Node.js 12.x
-        uses: actions/setup-node@v2
+        uses: actions/checkout@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
         with:
-          node-version: 12.x
-
+          node-version: 12
       - name: Install Dependencies
-        run: yarn
-
-      
-      # - name: Create Release Pull Request
-      #   uses: changesets/action@v1
-      #   with:
-      #     publish: npx changeset publish
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: yarn install
+      - name: Create Release Pull Request
+        uses: changesets/action@testing-workflow
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
