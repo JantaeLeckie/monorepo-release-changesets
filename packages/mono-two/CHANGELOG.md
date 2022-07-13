@@ -1,5 +1,16 @@
 # @azu/mono-two
 
+## 1.6.3
+
+### Patch Changes
+
+- bd1a609: Testing 2 [#50](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/50)
+
+  This is a new PR for mono-two update.
+
+  - Two
+  - three
+
 ## 1.6.2
 
 ### Patch Changes
