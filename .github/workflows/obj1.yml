@@ -3,7 +3,7 @@ name: Publish
 on:
   push:
     branches:
-    - testing-workflow
+    - testing-workflows
 
 jobs:
   publish:
@@ -19,6 +19,6 @@ jobs:
       - name: Install Dependencies
         run: yarn install
       - name: Create Release Pull Request
-        uses: changesets/action@testing-workflow
+        uses: changesets/action@testing-workflows
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
