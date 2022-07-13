@@ -22,6 +22,8 @@ jobs:
       uses: actions/setup-node@v1  
       with:  
         node_version: 12
+    - run:
+        echo '${{github.event.pull_request.labels}}'
     - name: Install Packages
       run:
         npm install
