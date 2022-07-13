@@ -6,7 +6,7 @@ name: Test Merge PR to Release
 on:
   push:
     branches:
-      - 'testing-workflows'
+      - 'testing'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,7 +19,7 @@ jobs:
       with:
         node_version: 12
     - run:
-        echo '${{github.ref}}'
+        echo '${{github.event.pull_request.labels}}'
     - name: Install Changelog Generator
       run: 
         npm install -g standard-version
