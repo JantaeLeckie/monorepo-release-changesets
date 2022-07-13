@@ -3,7 +3,7 @@ name: Testing a new pr
 on:
    pull_request:
     branches:
-      - testing-workflows
+      - workflows
     types: [closed, open]
     paths-ignore:
       - '.changeset/**'
