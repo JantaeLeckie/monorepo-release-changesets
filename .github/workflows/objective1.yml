@@ -23,7 +23,7 @@ jobs:
       with:  
         node_version: 12
     - run:
-        echo '${{github.event.pull_request.labels*.name}}'
+        echo '${{github.event.pull_request.labels.*.name}}'
     # - name: Install Packages
     #   run:
     #     npm install
