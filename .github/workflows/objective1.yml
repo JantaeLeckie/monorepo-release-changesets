@@ -18,10 +18,10 @@ jobs:
     steps:
     - name: Setup Checkout 
       uses: actions/checkout@v2
-    - name: Setup Node
-      uses: actions/setup-node@v1  
-      with:  
-        node_version: 12
+    - name: Setup Node ${{ matrix.node_version }}
+      uses: actions/setup-node@v1
+      with:
+        node_version: ${{ matrix.node_version }}
     - name: Install Packages
       run:
         yarn
@@ -46,7 +46,7 @@ jobs:
         git config --global user.email "${{github.actor}}@users.noreply.github.com"
         git config --global user.name "${{github.actor}}"
         git commit -m "CI(changeset): add changeset for PR #${PR_NUMBER}"
-        git push origin-with-token testing-workflows
+        git push origin testing-workflows
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
         PR_NUMBER: ${{ github.event.pull_request.number }} 
