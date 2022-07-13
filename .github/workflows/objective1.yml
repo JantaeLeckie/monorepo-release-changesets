@@ -14,7 +14,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: contains(github.ref, 'refs/heads/testing') && contains(github.event.pull_request.labels.*.name, 'feat')
+    if: contains(github.ref, 'refs/heads/testing')
     steps:
     - name: Setup Checkout 
       uses: actions/checkout@v2
@@ -24,17 +24,17 @@ jobs:
         node_version: 12
     - run:
         echo '${{github.event.pull_request.labels}}'
-    - name: Install Packages
-      run:
-        npm install
-    - name: Set Github Configuration
-      run: |
-        git add .
-        git config --global user.email "${{github.actor}}@users.noreply.github.com"
-        git config --global user.name "${{github.actor}}"
-    - name: Generate Updated Changelog
-      run:
-        npm run release -- --no-verify
-    - name: Commit Updated Changlog File
-      run: |
-        git push origin testing-workflows
+    # - name: Install Packages
+    #   run:
+    #     npm install
+    # - name: Set Github Configuration
+    #   run: |
+    #     git add .
+    #     git config --global user.email "${{github.actor}}@users.noreply.github.com"
+    #     git config --global user.name "${{github.actor}}"
+    # - name: Generate Updated Changelog
+    #   run:
+    #     npm run release -- --no-verify
+    # - name: Commit Updated Changlog File
+    #   run: |
+    #     git push origin testing-workflows

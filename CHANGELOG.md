@@ -10,8 +10,6 @@ All notable changes to this project will be documented in this file. See [standa
 * test objective1 updaet5 ([1dca2f5](https://github.com/azu/monorepo-release-changesets/commit/1dca2f5495c452b77a1c7ad890d5bafe5be38b37))
 
 ### 1.1.8 (2022-07-13)
-
-
 ### Features
 
 * test objective1 updaet4 ([00e14e2](https://github.com/azu/monorepo-release-changesets/commit/00e14e27e28373db87f1d1a3a2686f78f466706f))
