@@ -1,0 +1,38 @@
+# When a pull request is merged for a branch with prefix “release/****” and a 
+# version label to the main branch, trigger a github workflow to update the a 
+# changelog with the current versions changes
+
+name: 'Objective 1: Update Changelog on Merged PR Releases'
+on:
+  pull_request:
+    branches:
+      - 'testing-workflows'
+    types: [closed]
+    paths-ignore:
+      - '.changeset/**'
+      - '**/CHANGELOG.md'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true && contains(github.ref, 'refs/heads/testing') && contains( github.event.pull_request.labels.*.name, 'feat')
+    steps:
+    - name: Setup Checkout 
+      uses: actions/checkout@v2
+    - name: Setup Node
+      uses: actions/setup-node@v1  
+      with:
+        node_version: 12
+    - name: Install Packages
+      run:
+        npm install
+    - name: Set Github Configuration
+      run: |
+        git add .
+        git config --global user.email "${{github.actor}}@users.noreply.github.com"
+        git config --global user.name "${{github.actor}}"
+    - name: Generate Updated Changelog
+      run:
+        npm run release -- --no-verify
+    - name: Commit Updated Changlog File
+      run: |
+        git push origin testing-workflows
