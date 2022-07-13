@@ -22,19 +22,17 @@ jobs:
       uses: actions/setup-node@v1  
       with:  
         node_version: 12
-    - run:
-        echo '${{github.event.pull_request.labels.*.name}}'
-    # - name: Install Packages
-    #   run:
-    #     npm install
-    # - name: Set Github Configuration
-    #   run: |
-    #     git add .
-    #     git config --global user.email "${{github.actor}}@users.noreply.github.com"
-    #     git config --global user.name "${{github.actor}}"
-    # - name: Generate Updated Changelog
-    #   run:
-    #     npm run release -- --no-verify
-    # - name: Commit Updated Changlog File
-    #   run: |
-    #     git push origin testing-workflows
+    - name: Install Packages
+      run:
+        npm install
+    - name: Set Github Configuration
+      run: |
+        git add .
+        git config --global user.email "${{github.actor}}@users.noreply.github.com"
+        git config --global user.name "${{github.actor}}"
+    - name: Generate Updated Changelog
+      run:
+        npm run release -- --no-verify
+    - name: Commit Updated Changlog File
+      run: |
+        git push origin testing-workflows
