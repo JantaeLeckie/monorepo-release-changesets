@@ -46,7 +46,7 @@ jobs:
         git commit -m "CI(changeset): add changeset for PR #${PR_NUMBER}"
         git push origin master
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
         PR_NUMBER: ${{ github.event.pull_request.number }}
     # - name: Set Github Configuration
     #   run: |
