@@ -50,9 +50,9 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
         PR_NUMBER: ${{ github.event.pull_request.number }} 
-    - name: Generate Updated Changelog
-      run:
-        npm run release -- --no-verify
-    - name: Commit Updated Changlog File
-      run: |
-        git push --follow-tags origin testing-workflows
+    # - name: Generate Updated Changelog
+    #   run:
+    #     npm run release -- --no-verify
+    # - name: Commit Updated Changlog File
+    #   run: |
+    #     git push --follow-tags origin testing-workflows
