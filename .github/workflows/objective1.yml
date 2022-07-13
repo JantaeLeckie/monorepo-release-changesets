@@ -41,12 +41,12 @@ jobs:
         PR_NUMBER: ${{ github.event.pull_request.number }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Git push
-        run: |
-          git add .changeset
-          git config --global user.email "${{ secrets.GITHUB_ACTOR }}@users.noreply.github.com"
-          git config --global user.name "${{ secrets.GITHUB_ACTOR }}"
-          git commit -m "CI(changeset): add changeset for PR #${PR_NUMBER}"
-          git push origin-with-token testing-workflows
+      run: |
+        git add .changeset
+        git config --global user.email "${{ secrets.GITHUB_ACTOR }}@users.noreply.github.com"
+        git config --global user.name "${{ secrets.GITHUB_ACTOR }}"
+        git commit -m "CI(changeset): add changeset for PR #${PR_NUMBER}"
+        git push origin-with-token testing-workflows
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
         PR_NUMBER: ${{ github.event.pull_request.number }}
