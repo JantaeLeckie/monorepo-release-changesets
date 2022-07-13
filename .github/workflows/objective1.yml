@@ -14,8 +14,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: contains(github.ref, 'refs/heads/testing') && contains(github.event.pull_request.labels.*.name, 'feat')
-    steps:
+    if: contains(github.ref, 'refs/heads/testing')
     - name: Setup Checkout 
       uses: actions/checkout@v2
     - name: Setup Node
