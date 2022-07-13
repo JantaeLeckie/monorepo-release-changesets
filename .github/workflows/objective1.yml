@@ -24,12 +24,35 @@ jobs:
         node_version: 12
     - name: Install Packages
       run:
-        npm install
+        yarn
     - name: Set Github Configuration
       run: |
         git add .
-        git config --global user.email "${{github.actor}}@users.noreply.github.com"
-        git config --global user.name "${{github.actor}}"
+        git config --global user.email "${{ secrets.GITHUB_ACTOR }}@users.noreply.github.com"
+        git config --global user.name "${{ secrets.GITHUB_ACTOR }}"
+
+    - name: PR to Changesets
+      run: |
+        echo 'owner ${OWNER} repo ${REPO} pullRequestNumber ${PR_NUMBER} output ".changeset/${OWNER}-${REPO}-${PR_NUMBER}.md'
+        npx pr-to-changesets --config .github/pr-to-changesets.json --owner ${OWNER} --repo ${REPO} --pullRequestNumber ${PR_NUMBER} --output ".changeset/${OWNER}-${REPO}-${PR_NUMBER}.md"
+      env:
+        OWNER: ${{ github.event.pull_request.head.repo.owner.login }}
+        REPO: ${{ github.event.pull_request.head.repo.name }}
+        PR_NUMBER: ${{ github.event.pull_request.number }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Git push
+      run: |
+        git add .changeset
+        git commit -m "CI(changeset): add changeset for PR #${PR_NUMBER}"
+        git push origin master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PR_NUMBER: ${{ github.event.pull_request.number }}
+    # - name: Set Github Configuration
+    #   run: |
+    #     git add .
+    #     git config --global user.email "${{github.actor}}@users.noreply.github.com"
+    #     git config --global user.name "${{github.actor}}"
     # - name: Generate Updated Changelog
     #   run:
     #     npm run release -- --no-verify
