@@ -14,7 +14,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true && contains(github.ref, 'testing')
+    if: github.event.pull_request.merged == true && contains(github.ref, 'testing') && contains( github.event.pull_request.labels.*.name, 'feat')
     steps:
     - name: Setup Checkout 
       uses: actions/checkout@v2
@@ -23,7 +23,7 @@ jobs:
       with:  
         node_version: 12
     - run:
-        echo '${{github.event.pull_request.labels}}'
+        echo '${{github.event.pull_request.labels*.name}}'
     # - name: Install Packages
     #   run:
     #     npm install
