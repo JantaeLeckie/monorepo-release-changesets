@@ -19,6 +19,6 @@ jobs:
       - name: Install Dependencies
         run: yarn install
       - name: Create Release Pull Request
-        uses: changesets/action@testing-workflows
+        uses: changesets/action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
