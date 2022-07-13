@@ -14,7 +14,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true && contains(github.ref, 'refs/heads/testing') && contains( github.event.pull_request.labels.*.name, 'feat')
+    if: contains(github.ref, 'refs/heads/testing') && contains(github.event.pull_request.labels.*.name, 'feat')
     steps:
     - name: Setup Checkout 
       uses: actions/checkout@v2
