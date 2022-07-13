@@ -2,13 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### 1.1.8 (2022-07-13)
+## 1.2.0 (2022-07-13)
 
-### 1.1.7 (2022-07-13)
 
-### 1.1.6 (2022-07-13)
+### Features
 
-### 1.1.5 (2022-07-13)
+* test objective1 updaet4 ([00e14e2](https://github.com/azu/monorepo-release-changesets/commit/00e14e27e28373db87f1d1a3a2686f78f466706f))
 
 ### 1.1.4 (2022-07-12)
 
