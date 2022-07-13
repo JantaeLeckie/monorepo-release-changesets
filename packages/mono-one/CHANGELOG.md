@@ -1,5 +1,18 @@
 # @azu/mono-one
 
+## 1.6.4
+
+### Patch Changes
+
+- 5ca70cc: mono-one changeset update #2 [#49](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/49)
+
+  Mono-one has been updated to:
+
+  - one
+  - two
+  - three
+  - four
+
 ## 1.6.3
 
 ### Patch Changes
