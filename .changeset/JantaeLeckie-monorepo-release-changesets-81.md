@@ -1,5 +1,5 @@
 ---
-"@azu/mono-two": patch
+"jantaeleckie/mono-two": patch
 ---
     
 Testing 2 [#81](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/81)
