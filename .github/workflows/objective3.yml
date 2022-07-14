@@ -11,7 +11,7 @@ on:
 jobs:
   release-project:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true && contains(github.ref, 'changeset-release') && contains( github.event.pull_request.labels.*.name, 'Release')
+    if: github.event.pull_request.merged == true &&  contains( github.event.pull_request.labels.*.name, 'Release')
     steps:
     - name: Download Artificats
       uses: actions/download-artifact@v3
