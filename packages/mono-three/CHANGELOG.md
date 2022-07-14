@@ -1,5 +1,19 @@
 # @azu/mono-three
 
+## 1.6.4
+
+### Patch Changes
+
+- 2dc4c65: Testing 2 [#83](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/83)
+
+  testing: npm release
+
+- Updated dependencies [2e747f9]
+- Updated dependencies [63f5e0d]
+- Updated dependencies [2dc4c65]
+  - @azu/mono-two@1.6.9
+  - @azu/mono-one@1.6.12
+
 ## 1.6.3
 
 ### Patch Changes
