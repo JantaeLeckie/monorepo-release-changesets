@@ -1,5 +1,20 @@
 # @azu/mono-two
 
+## 1.6.8
+
+### Patch Changes
+
+- 5c44cdd: mono-two changeset update #4 [#76](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/76)
+
+  Mono-two has been updated:
+
+  - two
+  - three
+  - four
+  - five
+  - six
+  - seven
+
 ## 1.6.7
 
 ### Patch Changes
