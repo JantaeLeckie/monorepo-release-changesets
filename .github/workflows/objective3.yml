@@ -1,8 +1,7 @@
-# When a pull request is merged for a branch with prefix “release/****” and a 
-# version label to the main branch, trigger a github workflow to update the a 
-# changelog with the current versions changes
+# when the release pull request has been merged, it should contain all version 
+# bumped packages. Run a script to create an release to github updated  
 
-name: 'Objective 1: Update Changelog on Merged PR Releases'
+name: 'Objective 3: Create GitHub Releases'
 on:
   pull_request:
     branches:
