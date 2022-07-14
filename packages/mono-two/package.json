@@ -2,13 +2,13 @@
   "name": "@azu/mono-two",
   "version": "1.6.5",
   "description": "",
-  "homepage": "https://github.com/azu/monorepo-release-changesets/tree/master/packages/mono-two/",
+  "homepage": "https://github.com/JantaeLeckie/monorepo-release-changesets/tree/master/packages/mono-two/",
   "bugs": {
-    "url": "https://github.com/azu/monorepo-release-changesets/issues"
+    "url": "https://github.com/JantaeLeckie/monorepo-release-changesets/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/azu/monorepo-release-changesets.git",
+    "url": "https://github.com/JantaeLeckie/monorepo-release-changesets.git",
     "directory": "packages/mono-two"
   },
   "license": "MIT",
@@ -31,5 +31,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "gitHead": "a9f18df1b376dc2a514c9a1429bd26d1d3c47246"
 }
