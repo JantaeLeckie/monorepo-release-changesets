@@ -1,5 +1,22 @@
 # @azu/mono-two
 
+## 1.6.7
+
+### Patch Changes
+
+- 12bf907: Testing 2 [#74](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/74)
+
+  Mono-two has been updated:
+
+  - two
+  - three
+  - four
+  - five
+  - six
+
+- Updated dependencies [12bf907]
+  - @azu/mono-one@1.6.11
+
 ## 1.6.6
 
 ### Patch Changes
