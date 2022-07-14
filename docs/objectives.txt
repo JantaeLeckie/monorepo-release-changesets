@@ -8,4 +8,4 @@ changelog with the current versions changes
 collecting all changes for a release.
 
 3. when the release pull request has been merged, it should contain all version 
-bumped packages. Run a script to create an release to github updated
+bumped packages. Run a script to create an release to github updated  

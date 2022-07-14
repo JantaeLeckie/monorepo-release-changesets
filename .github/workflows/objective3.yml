@@ -1,0 +1,38 @@
+# when the release pull request has been merged, it should contain all version 
+# bumped packages. Run a script to create an release to github updated  
+
+name: 'Objective 3: Create GitHub Releases'
+on:
+  pull_request:
+    branches:
+      - 'testing-workflows'
+    types: [closed]
+
+jobs:
+  release-project:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true && contains( github.event.pull_request.labels.*.name, 'Release')
+    steps:
+    - name: Archive Site Content
+      uses: thedoctor0/zip-release@master
+      with:
+        filename: site.zip
+    - name: Create GitHub Release
+      id: create-github-release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+      with:
+        tag_name: Test
+        release_name: Release v.1
+    # - name: Upload GitHub Release Assets
+    #   id: upload-github-release_asset
+      # uses: actions/upload-release-asset@v1
+      # env:
+      #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+      # with:
+      #   upload_url: ${{ steps.create-github-release.outputs.upload_url }}
+      #   asset_path: ./monorepo.zip
+      #   asset_name: monorepo${{ github.run_number }}.zip
+      #   asset_content_type: application/zip 
+            
