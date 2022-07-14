@@ -17,10 +17,10 @@ jobs:
     #   uses: actions/download-artifact@v3
     #   with:
     #     name: static-site
-    - name: Archive Site Content
-      uses: thedoctor0/zip-release@master
-      with:
-        filename: monorepo.zip
+    # - name: Archive Site Content
+    #   uses: thedoctor0/zip-release@master
+    #   with:
+    #     filename: monorepo.zip
     - name: Create GitHub Release
       id: create-github-release
       uses: actions/create-release@v1
@@ -31,12 +31,12 @@ jobs:
         release_name: Release v.1
     - name: Upload GitHub Release Assets
       id: upload-github-release_asset
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-      with:
-        upload_url: ${{ steps.create-github-release.outputs.upload_url }}
-        asset_path: ./monorepo.zip
-        asset_name: monorepo${{ github.run_number }}.zip
-        asset_content_type: application/zip 
+      # uses: actions/upload-release-asset@v1
+      # env:
+      #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+      # with:
+      #   upload_url: ${{ steps.create-github-release.outputs.upload_url }}
+      #   asset_path: ./monorepo.zip
+      #   asset_name: monorepo${{ github.run_number }}.zip
+      #   asset_content_type: application/zip 
             
