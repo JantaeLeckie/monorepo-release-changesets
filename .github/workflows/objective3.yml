@@ -29,8 +29,8 @@ jobs:
       with:
         tag_name: Test Try
         release_name: Release v.1
-    - name: Upload GitHub Release Assets
-      id: upload-github-release_asset
+    # - name: Upload GitHub Release Assets
+    #   id: upload-github-release_asset
       # uses: actions/upload-release-asset@v1
       # env:
       #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
