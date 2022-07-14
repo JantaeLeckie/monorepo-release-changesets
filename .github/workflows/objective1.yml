@@ -7,7 +7,7 @@ on:
   pull_request:
     branches:
       - 'testing-workflows'
-    types: [closed, open]
+    types: [closed]
     # paths-ignore:
     #   - '.changeset/**'
     #   - '**/CHANGELOG.md'
