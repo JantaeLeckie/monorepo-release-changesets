@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JantaeLeckie/monorepo-release-changesets/blob/master/package.json.git"
+    "url": "https://github.com/JantaeLeckie/monorepo-release-changesets"
   },
   "license": "MIT",
   "author": "azu",
