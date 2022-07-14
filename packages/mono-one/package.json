@@ -1,14 +1,14 @@
 {
-  "name": "jantaeleckie/mono-one",
+  "name": "@jantaeleckie/mono-one",
   "version": "1.6.12",
   "description": "",
-  "homepage": "https://github.com/JantaeLeckie/monorepo-release-changesets/tree/master/packages/mono-one/",
+  "homepage": "https://github.com/@jantaeleckie/monorepo-release-changesets/tree/master/packages/mono-one/",
   "bugs": {
-    "url": "https://github.com/JantaeLeckie/monorepo-release-changesets/issues"
+    "url": "https://github.com/@jantaeleckie/monorepo-release-changesets/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JantaeLeckie/monorepo-release-changesets.git",
+    "url": "https://github.com/@jantaeleckie/monorepo-release-changesets.git",
     "directory": "packages/mono-one"
   },
   "license": "MIT",
