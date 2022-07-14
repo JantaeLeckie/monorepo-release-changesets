@@ -1,5 +1,108 @@
 # @azu/mono-one
 
+## 1.6.11
+
+### Patch Changes
+
+- 12bf907: mono-one changeset update #11 [#72](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/72)
+
+  Mono-one has been updated:
+
+  - one
+  - two
+  - three
+  - four
+  - five
+  - six
+
+## 1.6.10
+
+### Patch Changes
+
+- 726c1e4: mono-one changeset update #10 [#70](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/70)
+
+  Mono-one has been updated;
+
+  - one
+  - two
+  - three
+  - four
+  - five
+
+## 1.6.9
+
+### Patch Changes
+
+- 676576f: mono-one changeset update #9 [#68](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/68)
+
+  Mono-one has been updated:
+
+  - one
+  - two
+  - three
+  - four
+
+## 1.6.8
+
+### Patch Changes
+
+- b755284: mono-one changeset update #8 [#66](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/66)
+
+  Mono-one has been updated:
+
+  - one
+  - two
+  - three
+
+## 1.6.7
+
+### Patch Changes
+
+- 3ac6f69: mono-one changeset update #7 [#64](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/64)
+
+  Mono-one has been updated:
+
+  - one
+  - two
+
+## 1.6.6
+
+### Patch Changes
+
+- 9a4d02e: mono-one changeset update #6 [#63](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/63)
+
+  Mono-one updated:
+
+  - one
+
+## 1.6.5
+
+### Patch Changes
+
+- a781d60: mono-one changeset update #5 [#61](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/61)
+
+  Mono-one has been updated:
+
+  - one
+  - two
+  - three
+  - four
+  - five
+  - six
+
+## 1.6.4
+
+### Patch Changes
+
+- 5ca70cc: mono-one changeset update #2 [#49](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/49)
+
+  Mono-one has been updated to:
+
+  - one
+  - two
+  - three
+  - four
+
 ## 1.6.3
 
 ### Patch Changes
