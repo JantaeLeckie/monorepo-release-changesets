@@ -1,5 +1,13 @@
 # @azu/mono-one
 
+## 1.6.12
+
+### Patch Changes
+
+- 2dc4c65: Testing 2 [#83](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/83)
+
+  testing: npm release
+
 ## 1.6.11
 
 ### Patch Changes
