@@ -13,10 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true && contains( github.event.pull_request.labels.*.name, 'Release')
     steps:
-    - name: Download Artificats
-      uses: actions/download-artifact@v3
-      with:
-        name: static-site
     - name: Archive Site Content
       uses: thedoctor0/zip-release@master
       with:
