@@ -201,7 +201,6 @@
 
 - Updated dependencies [17b29ba]
 - Updated dependencies [17b29ba]
-  - @azu/mono-one@1.6.3
 
 ## 1.6.1
 
