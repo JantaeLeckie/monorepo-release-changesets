@@ -1,5 +1,15 @@
 # @azu/mono-one
 
+## 1.6.6
+
+### Patch Changes
+
+- 9a4d02e: mono-one changeset update #6 [#63](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/63)
+
+  Mono-one updated:
+
+  - one
+
 ## 1.6.5
 
 ### Patch Changes
