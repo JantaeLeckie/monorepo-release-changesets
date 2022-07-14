@@ -18,7 +18,7 @@ jobs:
     #   with:
     #     name: static-site
     - name: Archive Site Content
-      uses: thedoctor0/@zip-release@master
+      uses: thedoctor0/zip-release@master
       with:
         filename: monorepo.zip
     - name: Create GitHub Release
