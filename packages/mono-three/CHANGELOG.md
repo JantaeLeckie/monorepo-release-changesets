@@ -1,4 +1,4 @@
-# @azu/mono-three
+# @jantaeleckie/mono-three
 
 ## 1.6.4
 
@@ -11,8 +11,8 @@
 - Updated dependencies [2e747f9]
 - Updated dependencies [63f5e0d]
 - Updated dependencies [2dc4c65]
-  - @azu/mono-two@1.6.9
-  - @azu/mono-one@1.6.12
+  - @jantaeleckie/mono-two@1.6.9
+  - @jantaeleckie/mono-one@1.6.12
 
 ## 1.6.3
 
@@ -24,7 +24,7 @@
 
   # Releases
 
-  ## @azu/mono-three@1.6.2
+  ## @jantaeleckie/mono-three@1.6.2
 
   ### Patch Changes
 
@@ -65,9 +65,9 @@
   - Updated dependencies [6fbb5a8]
   - Updated dependencies [6fbb5a8]
   - Updated dependencies [6fbb5a8]
-    - @azu/mono-two@1.6.5
+    - @jantaeleckie/mono-two@1.6.5
 
-  ## @azu/mono-two@1.6.5
+  ## @jantaeleckie/mono-two@1.6.5
 
   ### Patch Changes
 
@@ -97,8 +97,8 @@
 
 - Updated dependencies [a781d60]
 - Updated dependencies [a781d60]
-  - @azu/mono-two@1.6.6
-  - @azu/mono-one@1.6.5
+  - @jantaeleckie/mono-two@1.6.6
+  - @jantaeleckie/mono-one@1.6.5
 
 ## 1.6.2
 
@@ -141,4 +141,4 @@
 - Updated dependencies [6fbb5a8]
 - Updated dependencies [6fbb5a8]
 - Updated dependencies [6fbb5a8]
-  - @azu/mono-two@1.6.5
+  - @jantaeleckie/mono-two@1.6.5
