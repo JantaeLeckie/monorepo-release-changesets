@@ -34,7 +34,7 @@ jobs:
         node_version: 16
     - name: Install Packages
       run:
-        yarn
+        yarn 
     - name: Set Github Configuration
       run: |
         git add .
@@ -74,9 +74,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
-      - name: Install Dependencies
-        run: yarn install
+          node-version: 14
       - name: Create Release Pull Request
         uses: changesets/action@v1
         with:
