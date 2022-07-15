@@ -1,7 +1,7 @@
 name: Tags Test
 
 on:
-  pull_request:
+  push:
     branches:
       - 'testing-workflows'
     tags:
