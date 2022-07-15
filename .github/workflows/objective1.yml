@@ -24,7 +24,7 @@ jobs:
           node_version: 16
       - name: Check Labels
         uses: docker:agilepathway/pull-request-label-checker:latest@
-        # with:
+        # with: 
         #   any_of: "Semver: major", "Type: Breaking Change", "Semver: minor", "Type: Feature", "Semver: patch", "Type: Bug", minor
         #   repo_token: ${{ secrets.GITHUB_TOKEN }}
      
