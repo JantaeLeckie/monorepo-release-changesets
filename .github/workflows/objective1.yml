@@ -22,10 +22,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node_version: 16
-      - uses: docker:agilepathway/pull-request-label-checker@latest
-        # with:
-        #   any_of: "Semver: major", "Type: Breaking Change", "Semver: minor", "Type: Feature", "Semver: patch", "Type: Bug", minor
-        #   repo_token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: docker:agilepathway/pull-request-label-checker:latest
+        with:
+          any_of: "Semver: major", "Type: Breaking Change", "Semver: minor", "Type: Feature", "Semver: patch", "Type: Bug", minor
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
      
   # build:
   #   needs: check_labels
