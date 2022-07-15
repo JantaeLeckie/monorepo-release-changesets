@@ -1,0 +1,20 @@
+name: Tags Test
+
+on:
+  tags:
+    - '**'
+
+jobs:
+  tagspush:
+    name: Push on Tag Reference 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Create Tags Action
+        run: echo "This is testing the tags action"
+      
