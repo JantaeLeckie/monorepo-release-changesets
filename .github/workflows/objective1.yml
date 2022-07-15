@@ -9,10 +9,10 @@ on:
       - 'testing-workflows'
     types:
       - closed
-      - synchronize
-      - reopened
-      - labeled
-      - unlabeled
+      # - synchronize
+      # - reopened
+      # - labeled
+      # - unlabeled
     # paths-ignore:
     #   - '.changeset/**'
     #   - '**/CHANGELOG.md'
@@ -23,75 +23,72 @@ jobs:
     steps:
       - uses: docker://agilepathway/pull-request-label-checker:latest
         with:
-          one_of: '"Semver: major","Type: Breaking Change","Semver: minor","Type: Feature","Semver: patch","Type: Bug" minor,feat'
+          any_of: 'Semver: major,Type: Breaking Change,Semver: minor,Type: Feature,Semver: patch,Type: Bug,minor,feat'
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-        # with: 
-        #   any_of: "Semver: major", "Type: Breaking Change", "Semver: minor", "Type: Feature", "Semver: patch", "Type: Bug", minor
-        #   repo_token: ${{ secrets.GITHUB_TOKEN }}
      
-  # build:
-  #   needs: check_labels
-  #   runs-on: ubuntu-latest
-  #   if: github.event.pull_request.merged == true && contains(github.ref, 'testing') && contains( github.event.pull_request.labels.*.name, 'Version')
-  #   steps:
-  #   - name: Setup Checkout 
-  #     uses: actions/checkout@v3
-  #   - name: Setup Node 
-  #     uses: actions/setup-node@v3
-  #     with:
-  #       node_version: 16
-  #   - name: Install Packages
-  #     run:
-  #       yarn
-  #   - name: Set Github Configuration
-  #     run: |
-  #       git add .
-  #       git config --global user.email "${{github.actor}}@users.noreply.github.com"
-  #       git config --global user.name "${{github.actor}}"
+  build:
+    needs: check_labels
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true && contains(github.ref, 'testing') && contains( github.event.pull_request.labels.*.name, 'Version')
+    steps:
+    - name: Setup Checkout 
+      uses: actions/checkout@v3
+    - name: Setup Node 
+      uses: actions/setup-node@v3
+      with:
+        node_version: 16
+    - name: Install Packages
+      run:
+        yarn
+    - name: Set Github Configuration
+      run: |
+        git add .
+        git config --global user.email "${{github.actor}}@users.noreply.github.com"
+        git config --global user.name "${{github.actor}}"
 
-  #   - name: PR to Changesets
-  #     run: |
-  #       echo 'owner ${OWNER} repo ${REPO} pullRequestNumber ${PR_NUMBER} output ".changeset/${OWNER}-${REPO}-${PR_NUMBER}.md'
-  #       npx pr-to-changesets --config .github/pr-to-changesets.json --owner ${OWNER} --repo ${REPO} --pullRequestNumber ${PR_NUMBER} --output ".changeset/${OWNER}-${REPO}-${PR_NUMBER}.md"
-  #     env:
-  #       OWNER: ${{ github.event.pull_request.head.repo.owner.login }}
-  #       REPO: ${{ github.event.pull_request.head.repo.name }}
-  #       PR_NUMBER: ${{ github.event.pull_request.number }}
-  #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  #   - name: Git push
-  #     run: |
-  #       git add .changeset
-  #       git config --global user.email "${{github.actor}}@users.noreply.github.com"
-  #       git config --global user.name "${{github.actor}}"
-  #       git commit -m "CI(changeset): add changeset for PR #${PR_NUMBER}"
-  #       git push origin testing-workflows
-  #     env:
-  #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-  #       PR_NUMBER: ${{ github.event.pull_request.number }} 
-  #   # - name: Generate Updated Changelog
-  #   #   run:
-  #   #     npm run release -- --no-verify
-  #   # - name: Commit Updated Changlog File
-  #   #   run: |
-  #   #     git push --follow-tags origin testing-workflows
-  # publish:
-  #   needs: build
-  #   name: Publish or Create Pull Request
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Checkout Repo
-  #       uses: actions/checkout@v3
-  #     - name: Setup Node.js
-  #       uses: actions/setup-node@v3
-  #       with:
-  #         node-version: 16
-  #     - name: Install Dependencies
-  #       run: yarn install
-  #     - name: Create Release Pull Request
-  #       uses: changesets/action@v1
-  #       with:
-  #         publish: npm run release-ci
-  #       env:
-  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  #         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-  #         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+    - name: PR to Changesets
+      run: |
+        echo 'owner ${OWNER} repo ${REPO} pullRequestNumber ${PR_NUMBER} output ".changeset/${OWNER}-${REPO}-${PR_NUMBER}.md'
+        npx pr-to-changesets --config .github/pr-to-changesets.json --owner ${OWNER} --repo ${REPO} --pullRequestNumber ${PR_NUMBER} --output ".changeset/${OWNER}-${REPO}-${PR_NUMBER}.md"
+      env:
+        OWNER: ${{ github.event.pull_request.head.repo.owner.login }}
+        REPO: ${{ github.event.pull_request.head.repo.name }}
+        PR_NUMBER: ${{ github.event.pull_request.number }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Git push
+      run: |
+        git add .changeset
+        git config --global user.email "${{github.actor}}@users.noreply.github.com"
+        git config --global user.name "${{github.actor}}"
+        git commit -m "CI(changeset): add changeset for PR #${PR_NUMBER}"
+        git push origin testing-workflows
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+        PR_NUMBER: ${{ github.event.pull_request.number }} 
+    # - name: Generate Updated Changelog
+    #   run:
+    #     npm run release -- --no-verify
+    # - name: Commit Updated Changlog File
+    #   run: |
+    #     git push --follow-tags origin testing-workflows
+  publish:
+    needs: build
+    name: Publish or Create Pull Request
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install Dependencies
+        run: yarn install
+      - name: Create Release Pull Request
+        uses: changesets/action@v1
+        with:
+          publish: npm run release-ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
