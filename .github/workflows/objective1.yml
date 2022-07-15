@@ -7,7 +7,12 @@ on:
   pull_request:
     branches:
       - 'testing-workflows'
-    types: [closed]
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - labeled
+      - unlabeled
     # paths-ignore:
     #   - '.changeset/**'
     #   - '**/CHANGELOG.md'
@@ -16,14 +21,10 @@ jobs:
     name: Check labels
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Checkout 
-        uses: actions/checkout@v3
-      - name: Setup Node 
-        uses: actions/setup-node@v3
+      - uses: docker://agilepathway/pull-request-label-checker:latest
         with:
-          node_version: 16
-      - name: Check Labels
-        uses: docker:agilepathway/pull-request-label-checker:latest@
+          one_of: major,minor,patch
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
         # with: 
         #   any_of: "Semver: major", "Type: Breaking Change", "Semver: minor", "Type: Feature", "Semver: patch", "Type: Bug", minor
         #   repo_token: ${{ secrets.GITHUB_TOKEN }}
