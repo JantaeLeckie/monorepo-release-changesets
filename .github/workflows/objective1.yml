@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: docker://agilepathway/pull-request-label-checker:latest
         with:
-          one_of: '"Semver: major", "Type: Breaking Change", "Semver: minor", "Type: Feature", "Semver: patch", "Type: Bug", minor, feat'
+          one_of: 'feat'
           repo_token: ${{ secrets.GITHUB_TOKEN }}
         # with: 
         #   any_of: "Semver: major", "Type: Breaking Change", "Semver: minor", "Type: Feature", "Semver: patch", "Type: Bug", minor
