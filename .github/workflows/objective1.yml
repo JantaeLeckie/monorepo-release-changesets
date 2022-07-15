@@ -9,13 +9,8 @@ on:
       - 'testing-workflows'
     types:
       - closed
-      # - synchronize
-      # - reopened
-      # - labeled
-      # - unlabeled
-    # paths-ignore:
-    #   - '.changeset/**'
-    #   - '**/CHANGELOG.md'
+      - labeled 
+
 jobs:
   check_labels:
     name: Check labels
@@ -29,7 +24,7 @@ jobs:
   build:
     needs: check_labels
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true && contains(github.ref, 'testing') && contains( github.event.pull_request.labels.*.name, 'Version')
+    if: github.event.pull_request.merged == true && contains(github.ref, 'testing')
     steps:
     - name: Setup Checkout 
       uses: actions/checkout@v3
@@ -55,6 +50,9 @@ jobs:
         REPO: ${{ github.event.pull_request.head.repo.name }}
         PR_NUMBER: ${{ github.event.pull_request.number }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Generate Updated Changelog
+      run:
+        npm run release -- --no-verify
     - name: Git push
       run: |
         git add .changeset
@@ -65,12 +63,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
         PR_NUMBER: ${{ github.event.pull_request.number }} 
-    # - name: Generate Updated Changelog
-    #   run:
-    #     npm run release -- --no-verify
-    # - name: Commit Updated Changlog File
-    #   run: |
-    #     git push --follow-tags origin testing-workflows
+
   publish:
     needs: build
     name: Publish or Create Pull Request
@@ -90,5 +83,5 @@ jobs:
           publish: npm run release-ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          # NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
