@@ -1,8 +1,9 @@
 name: Tags Test
 
 on:
-  tags:
-    - '**'
+  push:
+    tags:
+      - '**'
 
 jobs:
   tagspush:
