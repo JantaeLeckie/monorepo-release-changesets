@@ -2,13 +2,13 @@
   "name": "@jantaeleckie/mono-three",
   "version": "1.6.4",
   "description": "",
-  "homepage": "https://github.com/JantaeLeckie/monorepo-release-changesets/tree/master/packages/mono-three/",
+  "homepage": "https://github.com/@jantaeleckie/monorepo-release-changesets/tree/master/packages/mono-three/",
   "bugs": {
-    "url": "https://github.com/JantaeLeckie/monorepo-release-changesets/issues"
+    "url": "https://github.com/@jantaeleckie/monorepo-release-changesets/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JantaeLeckie/monorepo-release-changesets.git",
+    "url": "https://github.com/@jantaeleckie/monorepo-release-changesets.git",
     "directory": "packages/mono-three"
   },
   "license": "MIT",
@@ -32,6 +32,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "gitHead": "a9f18df1b376dc2a514c9a1429bd26d1d3c47246"
+  }
 }
