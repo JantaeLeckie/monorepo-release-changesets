@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "root",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "A monorepo use yarn and changesets without lerna.",
   "homepage": "https://github.com/@jantaeleckie/monorepo-release-changesets/blob/master/package.json",
   "bugs": {
