@@ -1,7 +1,7 @@
 ---
-"@azu/mono-one": patch
-"@azu/mono-three": patch
-"@azu/mono-two": patch
+"@jantaeleckie/mono-one": patch
+"@jantaeleckie/mono-three": patch
+"@jantaeleckie/mono-two": patch
 ---
     
 Testing 2 [#83](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/83)

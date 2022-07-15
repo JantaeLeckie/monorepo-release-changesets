@@ -1,5 +1,41 @@
 # @jantaeleckie/mono-two
 
+## 1.6.9
+
+### Patch Changes
+
+- 2e747f9: mono-two changeset update #6 [#79](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/79)
+
+  mono-two has been updated:
+
+  - two
+  - three
+  - four
+  - five
+  - six
+  - seven
+  - eight
+
+- 63f5e0d: Testing 2 [#81](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/81)
+
+  Mono-two has been updated:
+
+  - two
+  - three
+  - four
+  - five
+  - six
+  - seven
+  - eight
+  - nine
+
+- 2dc4c65: Testing 2 [#83](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/83)
+
+  testing: npm release
+
+- Updated dependencies [2dc4c65]
+  - @jantaeleckie/mono-one@1.6.12
+
 ## 1.6.8
 
 ### Patch Changes
