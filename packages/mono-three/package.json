@@ -26,7 +26,7 @@
   "scripts": {
     "test": "echo OK"
   },
-  "dependencies": {
+  "devdependencies": {
     "@azu/mono-one": "^1.6.13",
     "@azu/mono-two": "^1.6.10"
   },
