@@ -9,7 +9,6 @@ on:
       - 'testing-workflows'
     types:
       - closed
-      - labeled 
 
 jobs:
   check_labels:
