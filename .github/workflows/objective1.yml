@@ -56,7 +56,7 @@ jobs:
         git config --global user.email "${{github.actor}}@users.noreply.github.com"
         git config --global user.name "${{github.actor}}"
         git commit -m "CI(changeset): add changeset for PR #${PR_NUMBER}"
-        git push origin testing-workflows
+        git push origin testing-2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
         PR_NUMBER: ${{ github.event.pull_request.number }} 
