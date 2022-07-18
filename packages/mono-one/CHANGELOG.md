@@ -8,6 +8,14 @@
 
   testing: npm release
 
+## 1.6.13
+
+### Patch Changes
+
+- 9c6669d: Testing 2 [#83](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/83)
+
+  testing: npm release
+
 ## 1.6.11
 
 ### Patch Changes
