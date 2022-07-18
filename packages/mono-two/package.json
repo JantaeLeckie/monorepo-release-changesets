@@ -1,5 +1,5 @@
 {
-  "name": "@jantaeleckie/mono-two",
+  "name": "@azu/mono-two",
   "version": "1.6.9",
   "description": "",
   "homepage": "https://github.com/@jantaeleckie/monorepo-release-changesets/tree/master/packages/mono-two/",
@@ -27,7 +27,7 @@
     "test": "echo OK"
   },
   "dependencies": {
-    "@jantaeleckie/mono-one": "^1.6.12"
+    "@azu/mono-one": "^1.6.12"
   },
   "publishConfig": {
     "access": "public"
