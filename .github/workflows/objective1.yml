@@ -72,6 +72,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 14
+      - name: Install Packages
+        run:
+          yarn 
       - name: Create Release Pull Request
         uses: changesets/action@v1
         with:
