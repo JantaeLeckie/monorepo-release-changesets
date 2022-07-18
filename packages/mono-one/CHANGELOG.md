@@ -1,4 +1,4 @@
-# @jantaeleckie/mono-one
+# @azu/mono-one
 
 ## 1.6.12
 
@@ -20,7 +20,7 @@
 
 ### Patch Changes
 
-- 12bf907: mono-one changeset update #11 [#72](https://github.com/@jantaeleckie/monorepo-release-changesets/pull/72)
+- 12bf907: mono-one changeset update #11 [#72](https://github.com/@azu/monorepo-release-changesets/pull/72)
 
   Mono-one has been updated:
 
@@ -35,7 +35,7 @@
 
 ### Patch Changes
 
-- 726c1e4: mono-one changeset update #10 [#70](https://github.com/@jantaeleckie/monorepo-release-changesets/pull/70)
+- 726c1e4: mono-one changeset update #10 [#70](https://github.com/@azu/monorepo-release-changesets/pull/70)
 
   Mono-one has been updated;
 
@@ -49,7 +49,7 @@
 
 ### Patch Changes
 
-- 676576f: mono-one changeset update #9 [#68](https://github.com/@jantaeleckie/monorepo-release-changesets/pull/68)
+- 676576f: mono-one changeset update #9 [#68](https://github.com/@azu/monorepo-release-changesets/pull/68)
 
   Mono-one has been updated:
 
@@ -62,7 +62,7 @@
 
 ### Patch Changes
 
-- b755284: mono-one changeset update #8 [#66](https://github.com/@jantaeleckie/monorepo-release-changesets/pull/66)
+- b755284: mono-one changeset update #8 [#66](https://github.com/@azu/monorepo-release-changesets/pull/66)
 
   Mono-one has been updated:
 
@@ -74,7 +74,7 @@
 
 ### Patch Changes
 
-- 3ac6f69: mono-one changeset update #7 [#64](https://github.com/@jantaeleckie/monorepo-release-changesets/pull/64)
+- 3ac6f69: mono-one changeset update #7 [#64](https://github.com/@azu/monorepo-release-changesets/pull/64)
 
   Mono-one has been updated:
 
@@ -85,7 +85,7 @@
 
 ### Patch Changes
 
-- 9a4d02e: mono-one changeset update #6 [#63](https://github.com/@jantaeleckie/monorepo-release-changesets/pull/63)
+- 9a4d02e: mono-one changeset update #6 [#63](https://github.com/@azu/monorepo-release-changesets/pull/63)
 
   Mono-one updated:
 
@@ -95,7 +95,7 @@
 
 ### Patch Changes
 
-- a781d60: mono-one changeset update #5 [#61](https://github.com/@jantaeleckie/monorepo-release-changesets/pull/61)
+- a781d60: mono-one changeset update #5 [#61](https://github.com/@azu/monorepo-release-changesets/pull/61)
 
   Mono-one has been updated:
 
@@ -110,7 +110,7 @@
 
 ### Patch Changes
 
-- 5ca70cc: mono-one changeset update #2 [#49](https://github.com/@jantaeleckie/monorepo-release-changesets/pull/49)
+- 5ca70cc: mono-one changeset update #2 [#49](https://github.com/@azu/monorepo-release-changesets/pull/49)
 
   Mono-one has been updated to:
 
@@ -129,7 +129,7 @@
 
   # Releases
 
-  ## @jantaeleckie/mono-one@1.6.2
+  ## @azu/mono-one@1.6.2
 
   ### Patch Changes
 
@@ -139,7 +139,7 @@
 
     # Releases
 
-    ## @jantaeleckie/mono-one@1.6.1
+    ## @azu/mono-one@1.6.1
 
     ### Patch Changes
 
@@ -155,13 +155,13 @@
 
     # [1.6.0](https://github.com/azu/monorepo-release-changesets/compare/v1.5.0...v1.6.0) (2020-03-11)
 
-    **Note:** Version bump only for package @jantaeleckie/mono-one
+    **Note:** Version bump only for package @azu/mono-one
 
     # [1.5.0](https://github.com/azu/monorepo-release-changesets/compare/v1.4.1...v1.5.0) (2020-03-11)
 
-    **Note:** Version bump only for package @jantaeleckie/mono-one
+    **Note:** Version bump only for package @azu/mono-one
 
-  ## @jantaeleckie/mono-two@1.6.1
+  ## @azu/mono-two@1.6.1
 
   ### Patch Changes
 
@@ -172,7 +172,7 @@
     - It will update three
 
   - Updated dependencies [f3eebbc]
-    - @jantaeleckie/mono-one@1.6.2
+    - @azu/mono-one@1.6.2
 
 - 17b29ba: one: add big braking feature [#8](https://github.com/azu/monorepo-release-changesets/pull/8)
 
@@ -186,7 +186,7 @@
 
   # Releases
 
-  ## @jantaeleckie/mono-one@1.6.1
+  ## @azu/mono-one@1.6.1
 
   ### Patch Changes
 
@@ -202,8 +202,8 @@
 
   # [1.6.0](https://github.com/azu/monorepo-release-changesets/compare/v1.5.0...v1.6.0) (2020-03-11)
 
-  **Note:** Version bump only for package @jantaeleckie/mono-one
+  **Note:** Version bump only for package @azu/mono-one
 
   # [1.5.0](https://github.com/azu/monorepo-release-changesets/compare/v1.4.1...v1.5.0) (2020-03-11)
 
-  **Note:** Version bump only for package @jantaeleckie/mono-one
+  **Note:** Version bump only for package @azu/mono-one
