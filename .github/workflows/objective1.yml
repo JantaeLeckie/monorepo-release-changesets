@@ -7,14 +7,23 @@ on:
   pull_request:
     branches:
       - 'testing-workflows'
-    types: [closed]
-    # paths-ignore:
-    #   - '.changeset/**'
-    #   - '**/CHANGELOG.md'
+    types:
+      - closed
+
 jobs:
-  build:
+  check_labels:
+    name: Check labels
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true && contains(github.ref, 'testing') && contains( github.event.pull_request.labels.*.name, 'Version')
+    steps:
+      - uses: docker://agilepathway/pull-request-label-checker:latest
+        with:
+          any_of: 'Semver: major,Type: Breaking Change,Semver: minor,Type: Feature,Semver: patch,Type: Bug'
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+     
+  build:
+    needs: check_labels
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true && contains(github.ref, 'testing')
     steps:
     - name: Setup Checkout 
       uses: actions/checkout@v3
@@ -24,7 +33,7 @@ jobs:
         node_version: 16
     - name: Install Packages
       run:
-        yarn
+        yarn 
     - name: Set Github Configuration
       run: |
         git add .
@@ -40,6 +49,7 @@ jobs:
         REPO: ${{ github.event.pull_request.head.repo.name }}
         PR_NUMBER: ${{ github.event.pull_request.number }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
     - name: Git push
       run: |
         git add .changeset
@@ -50,30 +60,23 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
         PR_NUMBER: ${{ github.event.pull_request.number }} 
-    # - name: Generate Updated Changelog
-    #   run:
-    #     npm run release -- --no-verify
-    # - name: Commit Updated Changlog File
-    #   run: |
-    #     git push --follow-tags origin testing-workflows
-  publish:
-    needs: build
-    name: Publish or Create Pull Request
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 12
-      - name: Install Dependencies
-        run: yarn install
-      - name: Create Release Pull Request
-        uses: changesets/action@v1
-        with:
-          publish: npm run release-ci
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  # publish:
+  #   needs: build
+  #   name: Publish or Create Pull Request
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout Repo
+  #       uses: actions/checkout@v3
+  #     - name: Setup Node.js
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: 14
+  #     - name: Create Release Pull Request
+  #       uses: changesets/action@v1
+  #       with:
+  #         publish: npm run release-ci
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #         # NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+  #         # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
