@@ -12,7 +12,7 @@
     "url": "https://github.com/@jantaeleckie/monorepo-release-changesets"
   },
   "license": "MIT",
-  "author": "azu",
+  "author": "jantaeleckie",
   "workspaces": {
     "packages": [
       "packages/*"
