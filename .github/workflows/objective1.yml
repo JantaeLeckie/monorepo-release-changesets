@@ -50,19 +50,34 @@ jobs:
         REPO: ${{ github.event.pull_request.head.repo.name }}
         PR_NUMBER: ${{ github.event.pull_request.number }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Generate Updated Changelog
-      run:
-        npm run release -- --no-verify
-    - name: Git push
-      run: |
-        git add .changeset
-        git config --global user.email "${{github.actor}}@users.noreply.github.com"
-        git config --global user.name "${{github.actor}}"
-        git commit -m "CI(changeset): add changeset for PR #${PR_NUMBER}"
-        git push origin testing-workflows
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-        PR_NUMBER: ${{ github.event.pull_request.number }} 
+
+    - name: Update Changelog
+      uses: heinrichreimer/github-changelog-generator-action@v2.1.1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        issues: true
+        issuesWoLabels: true
+        pullRequests: true
+        prWoLabels: true
+        unreleased: true
+        addSections: '{"documentation":{"prefix":"**Documentation:**","labels":["documentation"]}}'
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Update Changelog for PR
+        file_pattern: CHANGELOG.md
+  # - name: Generate Updated Changelog
+    #   run:
+    #     npm run release -- --no-verify
+    # - name: Git push
+    #   run: |
+    #     git add .changeset
+    #     git config --global user.email "${{github.actor}}@users.noreply.github.com"
+    #     git config --global user.name "${{github.actor}}"
+    #     git commit -m "CI(changeset): add changeset for PR #${PR_NUMBER}"
+    #     git push origin testing-workflows
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+    #     PR_NUMBER: ${{ github.event.pull_request.number }} 
 
   publish:
     needs: build
