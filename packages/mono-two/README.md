@@ -1,4 +1,4 @@
-# @jantaeleckie/mono-two
+# @azu/mono-two
 
 Deps
 
@@ -8,7 +8,7 @@ Deps
 
 Install with [npm](https://www.npmjs.com/):
 
-    npm install @jantaeleckie/mono-two
+    npm install @azu/mono-two
 
 ## Usage
 
