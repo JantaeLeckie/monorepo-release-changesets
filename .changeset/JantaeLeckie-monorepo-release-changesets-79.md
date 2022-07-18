@@ -1,8 +1,8 @@
 ---
-"@jantaeleckie/mono-two": patch
+"@azu/mono-two": patch
 ---
     
-mono-two changeset update #6 [#79](https://github.com/@jantaeleckie/monorepo-release-changesets/pull/79)
+mono-two changeset update #6 [#79](https://github.com/@azu/monorepo-release-changesets/pull/79)
     
 mono-two has been updated:
   - two
