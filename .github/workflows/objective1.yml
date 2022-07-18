@@ -30,7 +30,7 @@ jobs:
     - name: Setup Node 
       uses: actions/setup-node@v3
       with:
-        node_version: 16
+        node_version: 14
     - name: Install Packages
       run:
         yarn 
@@ -72,14 +72,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 14
-      - name: Install Packages
-        run: yarn install 
-
+      - name: Install Dependencies
+        run: yarn install
       - name: Create Release Pull Request
         uses: changesets/action@v1
         with:
           publish: npm run release-ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          # NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
