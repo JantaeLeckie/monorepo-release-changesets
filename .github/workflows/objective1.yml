@@ -2,19 +2,29 @@
 # version label to the main branch, trigger a github workflow to update the a 
 # changelog with the current versions changes
 
+#Github release and packages workflow update 3 
+
 name: 'Objective 1: Update Changelog on Merged PR Releases'
 on:
   pull_request:
     branches:
-      - 'testing-workflows'
+      - 'testing-2'
     types: [closed]
-    # paths-ignore:
-    #   - '.changeset/**'
-    #   - '**/CHANGELOG.md'
+
 jobs:
-  build:
+  check_labels:
+    name: Check labels
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true && contains(github.ref, 'testing') && contains( github.event.pull_request.labels.*.name, 'Version')
+    steps:
+      - uses: docker://agilepathway/pull-request-label-checker:latest
+        with:
+          any_of: 'Semver: major,Type: Breaking Change,Semver: minor,Type: Feature,Semver: patch,Type: Bug'
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+
+  build:
+    needs: check_labels
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true 
     steps:
     - name: Setup Checkout 
       uses: actions/checkout@v3
@@ -46,16 +56,11 @@ jobs:
         git config --global user.email "${{github.actor}}@users.noreply.github.com"
         git config --global user.name "${{github.actor}}"
         git commit -m "CI(changeset): add changeset for PR #${PR_NUMBER}"
-        git push origin testing-workflows
+        git push origin testing-2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
         PR_NUMBER: ${{ github.event.pull_request.number }} 
-    # - name: Generate Updated Changelog
-    #   run:
-    #     npm run release -- --no-verify
-    # - name: Commit Updated Changlog File
-    #   run: |
-    #     git push --follow-tags origin testing-workflows
+        
   publish:
     needs: build
     name: Publish or Create Pull Request

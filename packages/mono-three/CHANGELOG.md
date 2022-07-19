@@ -1,5 +1,25 @@
 # @azu/mono-three
 
+## 1.6.6
+
+### Patch Changes
+
+- 6d06c7f: Changeset release/master [#120](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/120)
+
+  Changeset testing 2
+
+- 6d06c7f: new changeset testing 3 [#121](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/121)
+
+  changeset testing 3
+
+- 6d06c7f: new changeset testing 6 [#125](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/125)
+
+  Packages name updated to test changeset
+
+- 6d06c7f: Testing 2 [#86](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/86)
+
+  this is a test
+
 ## 1.6.4
 
 ### Patch Changes
@@ -18,7 +38,7 @@
 
 ### Patch Changes
 
-- a781d60: Version Packages [#56](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/56)
+- a781d60: Version Packages [#56](https://github.com/@azu/monorepo-release-changesets/pull/56)
 
   This PR was opened by the [Changesets release](https://github.com/changesets/action) GitHub action. When you're ready to do a release, you can merge this and publish to npm yourself or [setup this action to publish automatically](https://github.com/changesets/action#with-publishing). If you're not ready to do a release yet, that's fine, whenever you add more changesets to testing-workflows, this PR will be updated.
 
@@ -28,14 +48,14 @@
 
   ### Patch Changes
 
-  - 6fbb5a8: Testing 2 [#53](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/53)
+  - 6fbb5a8: Testing 2 [#53](https://github.com/@azu/monorepo-release-changesets/pull/53)
 
     Mono-three has been updated to include four.
 
     - feature
     - good
 
-  - 6fbb5a8: mono-three changeset update #2 [#55](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/55)
+  - 6fbb5a8: mono-three changeset update #2 [#55](https://github.com/@azu/monorepo-release-changesets/pull/55)
 
     Mono-three has been updated with five.
 
@@ -43,7 +63,7 @@
     - four
     - five
 
-  - 6fbb5a8: mono-three changeset update #3 [#57](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/57)
+  - 6fbb5a8: mono-three changeset update #3 [#57](https://github.com/@azu/monorepo-release-changesets/pull/57)
 
     Mono-three has been updated with five.
 
@@ -52,7 +72,7 @@
     - five
     - six
 
-  - 6fbb5a8: mono-three changeset update #4 [#58](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/58)
+  - 6fbb5a8: mono-three changeset update #4 [#58](https://github.com/@azu/monorepo-release-changesets/pull/58)
 
     Mono-three has been updated:
 
@@ -71,14 +91,14 @@
 
   ### Patch Changes
 
-  - 6fbb5a8: Testing 2 [#50](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/50)
+  - 6fbb5a8: Testing 2 [#50](https://github.com/@azu/monorepo-release-changesets/pull/50)
 
     This is a new PR for mono-two update.
 
     - Two
     - three
 
-  - 6fbb5a8: mono-two changeset update #1 [#59](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/59)
+  - 6fbb5a8: mono-two changeset update #1 [#59](https://github.com/@azu/monorepo-release-changesets/pull/59)
 
     Mono-two has been updated:
 
@@ -86,7 +106,7 @@
     - three
     - four
 
-  - 6fbb5a8: mono-two changeset update #2 [#60](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/60)
+  - 6fbb5a8: mono-two changeset update #2 [#60](https://github.com/@azu/monorepo-release-changesets/pull/60)
 
     Mono-two has been updated:
 
@@ -104,14 +124,14 @@
 
 ### Patch Changes
 
-- 6fbb5a8: Testing 2 [#53](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/53)
+- 6fbb5a8: Testing 2 [#53](https://github.com/@azu/monorepo-release-changesets/pull/53)
 
   Mono-three has been updated to include four.
 
   - feature
   - good
 
-- 6fbb5a8: mono-three changeset update #2 [#55](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/55)
+- 6fbb5a8: mono-three changeset update #2 [#55](https://github.com/@azu/monorepo-release-changesets/pull/55)
 
   Mono-three has been updated with five.
 
@@ -119,7 +139,7 @@
   - four
   - five
 
-- 6fbb5a8: mono-three changeset update #3 [#57](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/57)
+- 6fbb5a8: mono-three changeset update #3 [#57](https://github.com/@azu/monorepo-release-changesets/pull/57)
 
   Mono-three has been updated with five.
 
@@ -128,7 +148,7 @@
   - five
   - six
 
-- 6fbb5a8: mono-three changeset update #4 [#58](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/58)
+- 6fbb5a8: mono-three changeset update #4 [#58](https://github.com/@azu/monorepo-release-changesets/pull/58)
 
   Mono-three has been updated:
 

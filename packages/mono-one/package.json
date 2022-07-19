@@ -1,6 +1,6 @@
 {
   "name": "@azu/mono-one",
-  "version": "1.6.12",
+  "version": "1.6.13",
   "description": "",
   "homepage": "https://github.com/JantaeLeckie/monorepo-release-changesets/tree/master/packages/mono-one/",
   "bugs": {
@@ -28,6 +28,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "gitHead": "a9f18df1b376dc2a514c9a1429bd26d1d3c47246"
+  }
 }
