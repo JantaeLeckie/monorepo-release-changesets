@@ -1,5 +1,4 @@
 {
-  "name": "@jantaeleckieorg/mono-one",
   "version": "1.6.13",
   "description": "",
   "homepage": "https://github.com/JantaeLeckie/monorepo-release-changesets/tree/master/packages/mono-one/",
@@ -28,6 +27,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "gitHead": "88e2cd939f23df01b66e2c68d9389a4a47eb0799"
+  }
 }
