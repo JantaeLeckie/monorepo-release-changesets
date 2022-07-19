@@ -1,5 +1,21 @@
 # @jantaeleckie/mono-one
 
+## 1.6.15
+
+### Patch Changes
+
+- e82ae59: github release and packages workflow update25 [#160](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/160)
+
+  Github release and packages workflow update 25
+
+## 1.6.14
+
+### Patch Changes
+
+- a17f528: github release and packages workflow update11 [#143](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/143)
+
+  Github release and packages workflow update 11
+
 ## 1.6.13
 
 ### Patch Changes
