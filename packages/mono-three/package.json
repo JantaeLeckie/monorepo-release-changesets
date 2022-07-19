@@ -1,5 +1,5 @@
 {
-  "name": "@azu/mono-three",
+  "name": "@jantaeleckie/mono-three",
   "version": "1.6.6",
   "description": "",
   "homepage": "https://github.com/JantaeLeckie/monorepo-release-changesets/tree/master/packages/mono-three/",
@@ -12,7 +12,7 @@
     "directory": "packages/mono-three"
   },
   "license": "MIT",
-  "author": "azu",
+  "author": "JantaeLeckie",
   "files": [
     "bin/",
     "lib/",
@@ -27,8 +27,8 @@
     "test": "echo OK"
   },
   "devdependencies": {
-    "@azu/mono-one": "^1.6.13",
-    "@azu/mono-two": "^1.6.10"
+    "@jantaeleckie/mono-one": "^1.6.13",
+    "@jantaeleckie/mono-two": "^1.6.10"
   },
   "publishConfig": {
     "access": "public"
