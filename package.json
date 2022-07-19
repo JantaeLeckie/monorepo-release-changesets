@@ -3,13 +3,13 @@
   "name": "root",
   "version": "1.3.1",
   "description": "A monorepo use yarn and changesets without lerna.",
-  "homepage": "https://github.com/@azu/monorepo-release-changesets/blob/master/package.json",
+  "homepage": "https://github.com/JantaeLeckie/monorepo-release-changesets/blob/master/package.json",
   "bugs": {
-    "url": "https://github.com/@azu/monorepo-release-changesets/blob/master/package.json/issues"
+    "url": "https://github.com/JantaeLeckie/monorepo-release-changesets/blob/master/package.json/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/@azu/monorepo-release-changesets"
+    "url": "https://github.com/JantaeLeckie/monorepo-release-changesets"
   },
   "license": "MIT",
   "author": "azu",
