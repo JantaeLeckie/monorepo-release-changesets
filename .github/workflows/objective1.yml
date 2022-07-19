@@ -34,7 +34,7 @@ jobs:
         node_version: 16
     - name: Install Packages
       run:
-        yarn
+        npm install
     - name: Set Github Configuration
       run: |
         git add .
