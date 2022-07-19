@@ -2,13 +2,15 @@
 # version label to the main branch, trigger a github workflow to update the a 
 # changelog with the current versions changes
 
+#Github release and packages workflow update 3 
+
 name: 'Objective 1: Update Changelog on Merged PR Releases'
 on:
   pull_request:
     branches:
       - 'testing-2'
     types: [closed]
-    
+
 jobs:
   check_labels:
     name: Check labels
@@ -22,7 +24,7 @@ jobs:
   build:
     needs: check_labels
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true 
     steps:
     - name: Setup Checkout 
       uses: actions/checkout@v3
