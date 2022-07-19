@@ -11,6 +11,9 @@
     "type": "git",
     "url": "https://github.com/JantaeLeckie/monorepo-release-changesets"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "author": "azu",
   "workspaces": {
