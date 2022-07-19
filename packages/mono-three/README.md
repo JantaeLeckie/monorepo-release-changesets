@@ -1,4 +1,4 @@
-# @jantaeleckie/mono-three
+# @jantaeleckieorg/mono-three
 
 deps +
 
@@ -9,7 +9,7 @@ deps +
 
 Install with [npm](https://www.npmjs.com/):
 
-    npm install @jantaeleckie/mono-three
+    npm install @jantaeleckieorg/mono-three
 
 ## Usage
 

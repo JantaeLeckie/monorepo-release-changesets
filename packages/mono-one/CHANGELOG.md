@@ -1,4 +1,4 @@
-# @jantaeleckie/mono-one
+# @jantaeleckieorg/mono-one
 
 ## 1.6.13
 
@@ -141,7 +141,7 @@
 
   # Releases
 
-  ## @jantaeleckie/mono-one@1.6.2
+  ## @jantaeleckieorg/mono-one@1.6.2
 
   ### Patch Changes
 
@@ -151,7 +151,7 @@
 
     # Releases
 
-    ## @jantaeleckie/mono-one@1.6.1
+    ## @jantaeleckieorg/mono-one@1.6.1
 
     ### Patch Changes
 
@@ -167,13 +167,13 @@
 
     # [1.6.0](https://github.com/JantaeLeckie/monorepo-release-changesets/compare/v1.5.0...v1.6.0) (2020-03-11)
 
-    **Note:** Version bump only for package @jantaeleckie/mono-one
+    **Note:** Version bump only for package @jantaeleckieorg/mono-one
 
     # [1.5.0](https://github.com/JantaeLeckie/monorepo-release-changesets/compare/v1.4.1...v1.5.0) (2020-03-11)
 
-    **Note:** Version bump only for package @jantaeleckie/mono-one
+    **Note:** Version bump only for package @jantaeleckieorg/mono-one
 
-  ## @jantaeleckie/mono-two@1.6.1
+  ## @jantaeleckieorg/mono-two@1.6.1
 
   ### Patch Changes
 
@@ -184,7 +184,7 @@
     - It will update three
 
   - Updated dependencies [f3eebbc]
-    - @jantaeleckie/mono-one@1.6.2
+    - @jantaeleckieorg/mono-one@1.6.2
 
 - 17b29ba: one: add big braking feature [#8](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/8)
 
@@ -198,7 +198,7 @@
 
   # Releases
 
-  ## @jantaeleckie/mono-one@1.6.1
+  ## @jantaeleckieorg/mono-one@1.6.1
 
   ### Patch Changes
 
@@ -214,8 +214,8 @@
 
   # [1.6.0](https://github.com/JantaeLeckie/monorepo-release-changesets/compare/v1.5.0...v1.6.0) (2020-03-11)
 
-  **Note:** Version bump only for package @jantaeleckie/mono-one
+  **Note:** Version bump only for package @jantaeleckieorg/mono-one
 
   # [1.5.0](https://github.com/JantaeLeckie/monorepo-release-changesets/compare/v1.4.1...v1.5.0) (2020-03-11)
 
-  **Note:** Version bump only for package @jantaeleckie/mono-one
+  **Note:** Version bump only for package @jantaeleckieorg/mono-one
