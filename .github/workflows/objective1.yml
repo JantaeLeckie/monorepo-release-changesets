@@ -8,9 +8,7 @@ on:
     branches:
       - 'testing-2'
     types: [closed]
-    # paths-ignore:
-    #   - '.changeset/**'
-    #   - '**/CHANGELOG.md'
+    
 jobs:
   check_labels:
     name: Check labels
