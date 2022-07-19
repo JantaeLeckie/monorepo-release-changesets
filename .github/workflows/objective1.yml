@@ -62,7 +62,7 @@ jobs:
         PR_NUMBER: ${{ github.event.pull_request.number }} 
         
   publish:
-    needs: build
+    needs: build_changesets
     name: Publish or Create Pull Request
     runs-on: ubuntu-latest
     steps:
