@@ -1,6 +1,6 @@
 {
-  "name": "@jantaeleckieorg/mono-three",
-  "version": "1.6.6"
+  "name": "@jantaeleckie/mono-three",
+  "version": "1.6.6",
   "description": "",
   "homepage": "https://github.com/JantaeLeckie/monorepo-release-changesets/tree/master/packages/mono-three/",
   "bugs": {
@@ -27,8 +27,8 @@
     "test": "echo OK"
   },
   "devdependencies": {
-    "@jantaeleckieorg/mono-one": "^1.6.13",
-    "@jantaeleckieorg/mono-two": "^1.6.10"
+    "@jantaeleckie/mono-one": "^1.6.13",
+    "@jantaeleckie/mono-two": "^1.6.10"
   },
   "publishConfig": {
     "access": "public"
