@@ -1,23 +1,56 @@
-name: Publish package to GitHub Packages
+# when the release pull request has been merged, it should contain all version 
+# bumped packages. Run a script to create an release to github updated  
+
+name: 'Objective 3: Create GitHub Releases'
 on:
-  release:
-    types: [created]
+  pull_request:
+    branches:
+      - 'testing-2'
+    types: [closed]
+
 jobs:
-  build:
-    runs-on: ubuntu-latest 
-    permissions: 
-      contents: read
-      packages: write 
+  release-project:
+    name: Upload Release Asset
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true && contains( github.event.pull_request.labels.*.name, 'Release')
     steps:
-      - uses: actions/checkout@v3
-      # Setup .npmrc file to publish to GitHub Packages
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '16.x'
-          registry-url: 'https://npm.pkg.github.com'
-          # Defaults to the user or organization that owns the workflow file
-          scope: 'JantaeLeckie'
-      - run: npm ci
-      - run: npm publish
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build project # This would actually build your project, using zip for an example artifact
+        run: |
+          zip --junk-paths my-artifact README.md
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+      - name: Upload Release Asset
+        id: upload-release-asset 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+          asset_path: ./my-artifact.zip
+          asset_name: my-artifact.zip
+          asset_content_type: application/zip
+
+
+
+    # - name: Archive Site Content
+    #   uses: thedoctor0/zip-release@master
+    #   with:
+    #     filename: site.zip
+    # - name: Create GitHub Release
+    #   id: create-github-release
+    #   uses: actions/create-release@v1
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+    #   with:
+    #     tag: Test
+    #     release_name: Release ${{ github.run_number }}
