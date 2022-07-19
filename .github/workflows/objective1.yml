@@ -24,7 +24,7 @@ jobs:
   build:
     needs: check_labels
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true 
     steps:
     - name: Setup Checkout 
       uses: actions/checkout@v3
