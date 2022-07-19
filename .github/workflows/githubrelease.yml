@@ -25,7 +25,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: v1.1.${{ github.run_number }}
+          tag: v1.1.${{ github.run_number }}
           release_name: 'Release #${{ github.run_number }} ${{ github.ref }}'
           draft: false
           prerelease: false
