@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: 12
       - name: Install Dependencies
-        run: npm install
+        run: yarn install
       - name: Create Release Pull Request or Publish to npm
         uses: changesets/action@master
         # with:
