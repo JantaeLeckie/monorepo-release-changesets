@@ -1,4 +1,4 @@
-# @jantaeleckie/mono-two
+# @jantaeleckieorg/mono-two
 
 Deps
 
@@ -8,7 +8,7 @@ Deps
 
 Install with [npm](https://www.npmjs.com/):
 
-    npm install @jantaeleckie/mono-two
+    npm install @jantaeleckieorg/mono-two
 
 ## Usage
 
