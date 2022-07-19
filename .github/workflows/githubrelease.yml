@@ -1,7 +1,7 @@
 # when the release pull request has been merged, it should contain all version 
 # bumped packages. Run a script to create an release to github updated  
 
-name: 'Objective 3: Create GitHub Releases'
+name: 'Create GitHub Releases'
 on:
   pull_request:
     branches:
