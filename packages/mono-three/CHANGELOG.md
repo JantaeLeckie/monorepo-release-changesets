@@ -1,5 +1,13 @@
 # @jantaeleckie/mono-three
 
+## 1.6.8
+
+### Patch Changes
+
+- e82ae59: github release and packages workflow update25 [#160](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/160)
+
+  Github release and packages workflow update 25
+
 ## 1.6.7
 
 ### Patch Changes
