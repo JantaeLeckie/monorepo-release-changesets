@@ -1,5 +1,25 @@
 # @azu/mono-one
 
+## 1.6.13
+
+### Patch Changes
+
+- 6d06c7f: Changeset release/master [#120](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/120)
+
+  Changeset testing 2
+
+- 6d06c7f: new changeset testing 3 [#121](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/121)
+
+  changeset testing 3
+
+- 6d06c7f: new changeset testing 6 [#125](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/125)
+
+  Packages name updated to test changeset
+
+- 6d06c7f: Testing 2 [#86](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/86)
+
+  this is a test
+
 ## 1.6.12
 
 ### Patch Changes
