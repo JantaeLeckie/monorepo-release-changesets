@@ -1,5 +1,5 @@
 {
-  "name": "@jantaeleckieorg/mono-two",
+  "name": "@jantaeleckie/mono-two",
   "version": "1.6.10",
   "description": "",
   "homepage": "https://github.com/JantaeLeckie/monorepo-release-changesets/tree/master/packages/mono-two/",
@@ -27,10 +27,10 @@
     "test": "echo OK"
   },
   "dependencies": {
-    "@jantaeleckieorg/mono-one": "^1.6.13"
+    "@jantaeleckie/mono-one": "^1.6.13"
   },
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "88e2cd939f23df01b66e2c68d9389a4a47eb0799"
+  "gitHead": "da7e429602de1ce351b0cd88c9922af759900fd6"
 }

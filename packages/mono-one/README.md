@@ -1,4 +1,4 @@
-# @jantaeleckieorg/mono-one
+# @jantaeleckie/mono-one
 
 One Package
  
@@ -10,7 +10,7 @@ One Package
 
 Install with [npm](https://www.npmjs.com/):
 
-    npm install @jantaeleckieorg/mono-one
+    npm install @jantaeleckie/mono-one
 
 ## Usage
 
