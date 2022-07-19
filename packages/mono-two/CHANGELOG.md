@@ -1,5 +1,16 @@
 # @azu/mono-two
 
+## 1.6.11
+
+### Patch Changes
+
+- a17f528: github release and packages workflow update11 [#143](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/143)
+
+  Github release and packages workflow update 11
+
+- Updated dependencies [a17f528]
+  - @jantaeleckie/mono-one@1.6.14
+
 ## 1.6.10
 
 ### Patch Changes
