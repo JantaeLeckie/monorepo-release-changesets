@@ -35,6 +35,7 @@ jobs:
     - name: Install Packages
       run:
         yarn install
+
     - name: Set Github Configuration
       run: |
         git add .
@@ -50,6 +51,7 @@ jobs:
         REPO: ${{ github.event.pull_request.head.repo.name }}
         PR_NUMBER: ${{ github.event.pull_request.number }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
     - name: Git push
       run: |
         git add .changeset
