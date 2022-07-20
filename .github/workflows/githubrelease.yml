@@ -9,16 +9,16 @@ on:
     types: [closed]
 
 jobs:
-  github_release:
-    name: Upload Release Asset
-    runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true && contains(github.head_ref, 'changeset-release')
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Install Packages
-        run:
-          echo '${{ github.base_ref }}' '${{ secrets.GITHUB_BASE_REF }}, ${{ github.head_ref }} ** ${{ secrets.GITHUB_HEAD_REF }}'
+  # github_release:
+    # name: Upload Release Asset
+    # runs-on: ubuntu-latest
+    # if: github.event.pull_request.merged == true && contains(github.head_ref, 'changeset-release')
+    # steps:
+    #   - name: Checkout code
+    #     uses: actions/checkout@v2
+    #   - name: Install Packages
+    #     run:
+    #       echo '${{ github.base_ref }}' '${{ secrets.GITHUB_BASE_REF }}, ${{ github.head_ref }} ** ${{ secrets.GITHUB_HEAD_REF }}'
   #     - name: Build project # This would actually build your project, using zip for an example artifact
   #       run: |
   #         zip --junk-paths my-artifact README.md
@@ -63,17 +63,18 @@ jobs:
   #       env:
   #         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  # npm_release:
-  #   needs: github_release
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     # Setup .npmrc file to publish to npm
-  #     - uses: actions/setup-node@v3
-  #       with:
-  #         node-version: '16.x'
-  #         registry-url: 'https://registry.npmjs.org'
-  #     - run: yarn
-  #     - run: npm run release-ci 
-  #       env:
-  #         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+  npm_release:
+    name: NPM Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      # Setup .npmrc file to publish to npm
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+      - run: yarn
+      - run: npm run release-ci 
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
