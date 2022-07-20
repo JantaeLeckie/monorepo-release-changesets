@@ -12,13 +12,13 @@ jobs:
   github_release:
     name: Upload Release Asset
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.head.ref, 'changeset-release')
+    if: github.event.pull_request.merged == true && contains(github.payload.pull_request.labels.head.ref, 'changeset-release')
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Install Packages
         run:
-          echo '${{github.event.pull_request.labels.head.ref}}'
+          echo '${{github.payload.pull_request.labels.head.ref}}'
   #     - name: Build project # This would actually build your project, using zip for an example artifact
   #       run: |
   #         zip --junk-paths my-artifact README.md
