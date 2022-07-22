@@ -1,4 +1,4 @@
-# @azu/mono-two
+# @jantaeleckie/mono-two
 
 Deps
 
@@ -8,7 +8,7 @@ Deps
 
 Install with [npm](https://www.npmjs.com/):
 
-    npm install @azu/mono-two
+    npm install @jantaeleckie/mono-two
 
 ## Usage
 
@@ -16,7 +16,7 @@ Install with [npm](https://www.npmjs.com/):
 
 ## Changelog
 
-See [Releases page](https://github.com/azu/monorepo-release-changesets/releases).
+See [Releases page](https://github.com/JantaeLeckie/monorepo-release-changesets/releases).
 
 ## Running tests
 
@@ -28,7 +28,7 @@ Install devDependencies and Run `npm test`:
 
 Pull requests and stars are always welcome.
 
-For bugs and feature requests, [please create an issue](https://github.com/azu/monorepo-release-changesets/issues).
+For bugs and feature requests, [please create an issue](https://github.com/JantaeLeckie/monorepo-release-changesets/issues).
 
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
@@ -38,9 +38,9 @@ For bugs and feature requests, [please create an issue](https://github.com/azu/m
 
 ## Author
 
-- [github/azu](https://github.com/azu)
-- [twitter/azu_re](https://twitter.com/azu_re)
+- [github/JantaeLeckie](https://github.com/JantaeLeckie)
+- [twitter/JantaeLeckie_re](https://twitter.com/JantaeLeckie_re)
 
 ## License
 
-MIT © azu
+MIT © JantaeLeckie
