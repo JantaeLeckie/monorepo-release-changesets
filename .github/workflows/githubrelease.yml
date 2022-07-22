@@ -12,13 +12,13 @@ jobs:
   github_release:
     name: Upload Release Asset
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true && contains(github.head_ref, 'changeset-release')
+    if: github.event.pull_request.merged == true && contains( github.event.pull_request.labels.*.name, 'Release')
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Install Packages
         run:
-          echo '${{ github.base_ref }}' '${{ secrets.GITHUB_BASE_REF }}, ${{ github.head_ref }} ** ${{ secrets.GITHUB_HEAD_REF }}'
+          yarn install
       - name: Build project # This would actually build your project, using zip for an example artifact
         run: |
           zip --junk-paths my-artifact README.md
@@ -59,13 +59,12 @@ jobs:
           # Defaults to the user or organization that owns the workflow file
           scope: 'JantaeLeckie'
       - run: yarn 
-      - run: npm run release-ci
+      - run: yarn release-ci
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   npm_release:
     needs: github_release
-    name: NPM Release
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
