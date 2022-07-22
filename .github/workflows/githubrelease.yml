@@ -66,6 +66,7 @@ jobs:
   npm_release:
     name: NPM Release
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true && contains(github.head_ref, 'changeset-release')
     steps:
       - uses: actions/checkout@v3
       # Setup .npmrc file to publish to npm
