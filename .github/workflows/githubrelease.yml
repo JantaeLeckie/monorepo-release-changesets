@@ -12,7 +12,7 @@ jobs:
   github_release:
     name: Upload Release Asset
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true && contains( github.event.pull_request.labels.*.name, 'Release')
+    if: github.event.pull_request.merged == true && contains(github.head_ref, 'changeset-release')
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
