@@ -1,5 +1,15 @@
 # @jantaeleckie/mono-one
 
+## 1.6.15
+
+### Patch Changes
+
+- c62f3eb: demo of actions mono-one updated 3 [#195](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/195)
+
+  Demo of GitHub actions:
+
+  - mono-one has been updated
+
 ## 1.6.14
 
 ### Patch Changes
