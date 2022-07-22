@@ -1,5 +1,16 @@
 # jantaeleckie/mono-two
 
+## 1.6.11
+
+### Patch Changes
+
+- 78509b5: demo of actions mono-one updated 6 [#201](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/201)
+
+  Demo of GitHub Actions:
+
+  - mono-one has been updated
+  - mono-two has been updated
+
 ## 1.6.12
 
 ### Patch Changes
