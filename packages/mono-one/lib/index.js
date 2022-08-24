@@ -1,1 +1,1 @@
-module.exports = "one, two, three, four, five, six";
+module.exports = "one, two, three, four, five, six, seven";
