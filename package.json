@@ -23,6 +23,7 @@
   },
   "scripts": {
     "test": "lerna run test",
+    "build": "lerna run build",
     "add-changesets": "changeset add",
     "release-ci": "lerna publish from-package --y --no-verify-access"
   },
