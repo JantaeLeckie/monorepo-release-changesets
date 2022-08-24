@@ -4,8 +4,8 @@ Objectives
 version label to the main branch, trigger a github workflow to update the a 
 changelog with the current versions changes
 
-2. When merged, the workflow should create a pull request to the main branch 
-collecting all changes for a release.
+    2. When merged, the workflow should create a pull request to the main branch 
+    collecting all changes for a release.
 
 3. when the release pull request has been merged, it should contain all version 
 bumped packages. Run a script to create an release to github updated  
