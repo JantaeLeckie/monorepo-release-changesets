@@ -1,5 +1,13 @@
 # @jantaeleckie/mono-one
 
+## 1.6.18
+
+### Patch Changes
+
+- 0452d72: Release/workflow [#207](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/207)
+
+  Testing GitHub Actions Again
+
 ## 1.6.17
 
 ### Patch Changes
