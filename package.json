@@ -25,7 +25,7 @@
     "test": "lerna run test",
     "build": "lerna run build",
     "add-changesets": "changeset add",
-    "release-ci": "lerna publish from-package --y --no-verify-access"
+    "release-ci": "lerna publish from-package --yes --no-verify-access"
   },
   "devDependencies": {
     "@changesets/cli": "^2.6.1",
