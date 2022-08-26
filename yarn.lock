@@ -276,6 +276,11 @@
     unique-filename "^1.1.1"
     which "^1.3.1"
 
+"@jantaeleckie/mono-one@^1.6.13":
+  version "1.6.16"
+  resolved "https://registry.yarnpkg.com/@jantaeleckie/mono-one/-/mono-one-1.6.16.tgz#dc34855e5190501c1d5613e88963183c81d16a08"
+  integrity sha512-wlFKXM+SBh6BFH35AO7etgAohqsPqZklVTW484R7XgayVJVz7ea3adFaWFCNbaIdfP8KsEnO0V+t5I7M4Zn1hA==
+
 "@lerna/add@3.20.0":
   version "3.20.0"
   resolved "https://registry.npmjs.org/@lerna/add/-/add-3.20.0.tgz"
