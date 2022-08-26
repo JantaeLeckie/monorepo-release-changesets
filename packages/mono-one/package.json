@@ -1,5 +1,5 @@
 {
-  "name": "@packages/mono-one",
+  "name": "@jantaeleckie/mono-one",
   "version": "1.6.16",
   "description": "",
   "homepage": "https://github.com/JantaeLeckie/monorepo-release-changesets/tree/master/packages/mono-one/",
@@ -20,7 +20,7 @@
   ],
   "workspaces": {
     "packages": [
-      "lib/**"
+      "packages/**"
     ]
   },
   "main": "lib/index.js",
