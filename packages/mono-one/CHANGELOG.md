@@ -1,5 +1,13 @@
 # @jantaeleckie/mono-one
 
+## 1.6.22
+
+### Patch Changes
+
+- 279773f: Release/workflow [#232](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/232)
+
+  registry changed
+
 ## 1.6.21
 
 ### Patch Changes
