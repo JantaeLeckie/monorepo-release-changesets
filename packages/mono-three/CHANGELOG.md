@@ -1,5 +1,13 @@
 # @jantaeleckie/mono-three
 
+## 1.6.8
+
+### Patch Changes
+
+- 495c7f9: demo of actions mono-one updated 20" [#241](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/241)
+
+  packages updated
+
 ## 1.6.7
 
 ### Patch Changes
