@@ -1,6 +1,6 @@
 {
-  "name": "@jantaeleckie/mono-one",
-  "version": "1.6.22",
+  "name": "@packages/mono-one",
+  "version": "1.6.16",
   "description": "",
   "homepage": "https://github.com/JantaeLeckie/monorepo-release-changesets/tree/master/packages/mono-one/",
   "bugs": {
@@ -18,6 +18,11 @@
     "lib/",
     "src/"
   ],
+  "workspaces": {
+    "packages": [
+      "lib/**"
+    ]
+  },
   "main": "lib/index.js",
   "directories": {
     "lib": "lib",
