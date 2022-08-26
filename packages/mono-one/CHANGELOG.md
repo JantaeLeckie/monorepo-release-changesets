@@ -1,5 +1,53 @@
 # @jantaeleckie/mono-one
 
+## 1.6.22
+
+### Patch Changes
+
+- 279773f: Release/workflow [#232](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/232)
+
+  registry changed
+
+## 1.6.21
+
+### Patch Changes
+
+- 3b1be9b: demo of actions mono-one updated 4 [#215](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/215)
+
+  seven added to mono-one
+
+## 1.6.20
+
+### Patch Changes
+
+- b1dd06f: demo of actions mono-one updated 3 [#211](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/211)
+
+  Six has been added to mono-one
+
+## 1.6.19
+
+### Patch Changes
+
+- 51fe066: demo of actions mono-one updated 2 [#209](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/209)
+
+  Mono one updated to add five
+
+## 1.6.18
+
+### Patch Changes
+
+- 0452d72: Release/workflow [#207](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/207)
+
+  Testing GitHub Actions Again
+
+## 1.6.17
+
+### Patch Changes
+
+- 2d0535c: demo of actions mono-one updated 1 [#205](https://github.com/JantaeLeckie/monorepo-release-changesets/pull/205)
+
+  Testing the npm release
+
 ## 1.6.16
 
 ### Patch Changes
